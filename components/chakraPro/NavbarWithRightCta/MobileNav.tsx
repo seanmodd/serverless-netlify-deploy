@@ -30,12 +30,12 @@ const variants: Variants = {
     display: 'revert',
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.2, ease: 'easeOut' },
+    transition: { duration: 0.3, ease: 'easeOut' },
   },
   hide: {
-    opacity: 0,
+    opacity: 0.2,
     scale: 0.98,
-    transition: { duration: 0.1, ease: 'easeIn' },
+    transition: { duration: 0.3, ease: 'easeIn' },
     transitionEnd: { display: 'none' },
   },
 };
@@ -45,7 +45,7 @@ const Backdrop = ({ show }: { show?: boolean }) => (
     <motion.div
       initial={false}
       animate={show ? 'show' : 'hide'}
-      transition={{ duration: 0.7 }}
+      transition={{ duration: 0.8 }}
       variants={{
         show: { opacity: 1, display: 'revert' },
         hide: { opacity: 0, transitionEnd: { display: 'none' } },
@@ -54,7 +54,7 @@ const Backdrop = ({ show }: { show?: boolean }) => (
         width: '100vw',
         height: '100vh',
         position: 'fixed',
-        background: 'rgba(0,0,0,0.5)',
+        background: 'rgba(0,0,0,0.9)',
         inset: 0,
       }}
     />
