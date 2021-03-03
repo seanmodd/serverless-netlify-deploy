@@ -9,10 +9,10 @@ import {
   useFocusOnShow,
   VStack,
   useColorModeValue as mode,
-} from '@chakra-ui/react'
-import { HTMLMotionProps, motion, Variants } from 'framer-motion'
-import * as React from 'react'
-import FocusLock from 'react-focus-lock'
+} from '@chakra-ui/react';
+import { HTMLMotionProps, motion, Variants } from 'framer-motion';
+import * as React from 'react';
+import FocusLock from 'react-focus-lock';
 import {
   HiBookOpen,
   HiCloudDownload,
@@ -20,10 +20,10 @@ import {
   HiOutlineMenu,
   HiOutlineX,
   HiQuestionMarkCircle,
-} from 'react-icons/hi'
-import { RemoveScroll } from 'react-remove-scroll'
-import { Logo } from './Logo'
-import { NavLink } from './NavLink'
+} from 'react-icons/hi';
+import { RemoveScroll } from 'react-remove-scroll';
+import { Logo } from './Logo';
+import { NavLink } from './NavLink';
 
 const variants: Variants = {
   show: {
@@ -38,31 +38,31 @@ const variants: Variants = {
     transition: { duration: 0.1, ease: 'easeIn' },
     transitionEnd: { display: 'none' },
   },
-}
+};
 
 const Backdrop = ({ show }: { show?: boolean }) => (
   <Portal>
     <motion.div
       initial={false}
       animate={show ? 'show' : 'hide'}
-      transition={{ duration: 0.1 }}
+      transition={{ duration: 0.7 }}
       variants={{
         show: { opacity: 1, display: 'revert' },
         hide: { opacity: 0, transitionEnd: { display: 'none' } },
       }}
       style={{
-        width: '100%',
+        width: '100vw',
         height: '100vh',
-        position: 'absolute',
-        background: 'rgba(0,0,0,0.2)',
+        position: 'fixed',
+        background: 'rgba(0,0,0,0.5)',
         inset: 0,
       }}
     />
   </Portal>
-)
+);
 
 const Transition = (props: HTMLMotionProps<'div'> & { in?: boolean }) => {
-  const { in: inProp, ...rest } = props
+  const { in: inProp, ...rest } = props;
   return (
     <motion.div
       {...rest}
@@ -79,13 +79,13 @@ const Transition = (props: HTMLMotionProps<'div'> & { in?: boolean }) => {
         zIndex: 1,
       }}
     />
-  )
-}
+  );
+};
 
 export const MobileNav = () => {
-  const [show, { toggle, off }] = useBoolean()
-  const ref = React.useRef<HTMLDivElement>(null)
-  useFocusOnShow(ref, { visible: show, shouldFocus: true })
+  const [show, { toggle, off }] = useBoolean();
+  const ref = React.useRef<HTMLDivElement>(null);
+  useFocusOnShow(ref, { visible: show, shouldFocus: true });
 
   return (
     <>
@@ -107,7 +107,7 @@ export const MobileNav = () => {
         </RemoveScroll>
         <FocusLock disabled={!show} returnFocus>
           <Box
-            bg={mode('white', 'gray.700')}
+            bg={mode('gray.50', 'gray.800')}
             shadow="lg"
             rounded="lg"
             ref={ref}
@@ -136,15 +136,21 @@ export const MobileNav = () => {
                 <NavLink.Mobile icon={HiCloudDownload}>Product</NavLink.Mobile>
                 <NavLink.Mobile icon={HiCurrencyDollar}>Pricing</NavLink.Mobile>
                 <NavLink.Mobile icon={HiBookOpen}>Resources</NavLink.Mobile>
-                <NavLink.Mobile icon={HiQuestionMarkCircle}>Help</NavLink.Mobile>
+                <NavLink.Mobile icon={HiQuestionMarkCircle}>
+                  Help
+                </NavLink.Mobile>
               </SimpleGrid>
               <VStack mt="8" spacing="4">
-                <Button w="full" colorScheme="blue">
+                <Button w="full" colorScheme="twitter">
                   Start Free Trial
                 </Button>
-                <Box textAlign="center" fontWeight="medium">
+                <Box
+                  color={mode('gray.900', 'gray.100')}
+                  textAlign="center"
+                  fontWeight="medium"
+                >
                   Have an account?{' '}
-                  <Box as="a" color={mode('blue.600', 'blue.400')}>
+                  <Box as="a" color={mode('blue.800', 'blue.300')}>
                     Log in
                   </Box>
                 </Box>
@@ -154,5 +160,5 @@ export const MobileNav = () => {
         </FocusLock>
       </Transition>
     </>
-  )
-}
+  );
+};

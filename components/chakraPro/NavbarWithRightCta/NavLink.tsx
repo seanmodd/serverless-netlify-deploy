@@ -45,6 +45,7 @@ const MobileNavLink = (props: MobileNavLinkProps) => {
       p="3"
       align="center"
       rounded="md"
+      color={mode('gray.900', 'gray.100')}
       cursor="pointer"
       _hover={{ bg: mode('gray.50', 'gray.600') }}
     >
