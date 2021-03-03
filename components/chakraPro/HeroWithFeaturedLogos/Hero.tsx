@@ -9,6 +9,7 @@ import {
   useColorModeValue as mode,
 } from '@chakra-ui/react';
 import * as React from 'react';
+import Newsletter from '../NewsletterWithDarkBg/Newsletter';
 import * as Logos from './Brands';
 
 function Hero() {
@@ -68,6 +69,7 @@ function Hero() {
             alt="Screening talent"
           />
         </Stack>
+
         <Box>
           <Text color={mode('gray.900', 'gray.100')} fontWeight="medium">
             Proudly trusted by 5,000+ companies and individuals

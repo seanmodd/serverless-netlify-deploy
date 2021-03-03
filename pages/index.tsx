@@ -3,6 +3,7 @@ import { Heading, Flex } from '@chakra-ui/react';
 import PersonalList from '../components/PersonalList';
 import Hero from '../components/chakraPro/HeroWithFeaturedLogos/Hero';
 import Navbar from '../components/chakraPro/NavbarWithRightCta/Navbar';
+import Newsletter from '../components/chakraPro/NewsletterWithDarkBg/Newsletter';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <Hero />
+      <Newsletter />
       <Flex flexDirection="column" alignItems="center" width="100%">
         <Heading textColor="blue.500">Here</Heading>
 
