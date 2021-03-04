@@ -43,6 +43,9 @@ function Hero() {
             >
               All-in-one online form & survey builder
             </Heading>
+            <Button size="xl" variant="with-shadow">
+              Welcome
+            </Button>
             <Text color={mode('gray.900', 'gray.100')} mt="5" fontSize="xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua

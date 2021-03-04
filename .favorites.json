@@ -1,0 +1,65 @@
+[
+    {
+        "type": "Group",
+        "name": "favorites",
+        "parent_id": null,
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "1nvh5CeXfmzO7t0Z",
+        "iconColor": "rgb(255, 0, 255)"
+    },
+    {
+        "type": "Directory",
+        "name": "/Users/seanmodd/Development/2021/next-netlify-starter/components/chakraPro/HeroWithFeaturedLogos",
+        "parent_id": "1nvh5CeXfmzO7t0Z",
+        "fsPath": "/Users/seanmodd/Development/2021/next-netlify-starter/components/chakraPro/HeroWithFeaturedLogos",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "yE38ksnx2HU95gCm"
+    },
+    {
+        "type": "Directory",
+        "name": "/Users/seanmodd/Development/2021/next-netlify-starter/components/chakraPro/NavbarWithRightCta",
+        "parent_id": "1nvh5CeXfmzO7t0Z",
+        "fsPath": "/Users/seanmodd/Development/2021/next-netlify-starter/components/chakraPro/NavbarWithRightCta",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "209nEswqzr81DcjJ"
+    },
+    {
+        "type": "Directory",
+        "name": "/Users/seanmodd/Development/2021/next-netlify-starter/components/chakraPro/NewsletterWithDarkBg",
+        "parent_id": "1nvh5CeXfmzO7t0Z",
+        "fsPath": "/Users/seanmodd/Development/2021/next-netlify-starter/components/chakraPro/NewsletterWithDarkBg",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "yBHNdLAD3CS4sGMe"
+    },
+    {
+        "type": "File",
+        "name": "/Users/seanmodd/Development/2021/next-netlify-starter/pages/_app.tsx",
+        "parent_id": "1nvh5CeXfmzO7t0Z",
+        "fsPath": "/Users/seanmodd/Development/2021/next-netlify-starter/pages/_app.tsx",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "8ktZA59o4D3qhEvn"
+    },
+    {
+        "type": "File",
+        "name": "/Users/seanmodd/Development/2021/next-netlify-starter/pages/index.tsx",
+        "parent_id": "1nvh5CeXfmzO7t0Z",
+        "fsPath": "/Users/seanmodd/Development/2021/next-netlify-starter/pages/index.tsx",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "rsu8f9NZlLPXeYio"
+    },
+    {
+        "type": "File",
+        "name": "/Users/seanmodd/Development/2021/next-netlify-starter/pages/myIndex.tsx",
+        "parent_id": "1nvh5CeXfmzO7t0Z",
+        "fsPath": "/Users/seanmodd/Development/2021/next-netlify-starter/pages/myIndex.tsx",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "ovwNfqdx1lnLVycr"
+    }
+]
