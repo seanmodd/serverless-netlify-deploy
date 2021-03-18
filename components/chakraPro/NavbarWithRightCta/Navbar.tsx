@@ -7,7 +7,7 @@ import {
   useColorModeValue as mode,
   VisuallyHidden,
 } from '@chakra-ui/react';
-import { Link as ReachLink } from '@reach/router';
+
 import * as React from 'react';
 import NextLink from 'next/link';
 import DarkModeSwitch from './DarkModeSwitch';

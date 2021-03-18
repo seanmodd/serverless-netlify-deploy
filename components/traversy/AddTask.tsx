@@ -48,7 +48,7 @@ const AddTask = ({ onAdd }) => {
           <FormLabel>Set Reminder</FormLabel>
           <Checkbox
             type="checkbox"
-            value={reminder}
+            // value={reminder}
             checked={reminder}
             onChange={(e) => setReminder(e.currentTarget.checked)}
           />

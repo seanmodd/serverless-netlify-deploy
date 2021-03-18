@@ -1,7 +1,7 @@
 import { Button, IconButton } from '@chakra-ui/button';
 import { CloseIcon, WarningIcon } from '@chakra-ui/icons';
 import { Flex, Heading, HStack, Spacer, Text, VStack } from '@chakra-ui/layout';
-import Tasks from '../Tasks';
+
 import classes from './contact-form.module.css';
 
 const Task = ({ task, onDelete, onToggle }) => (
@@ -17,7 +17,7 @@ const Task = ({ task, onDelete, onToggle }) => (
     >
       <VStack>
         <HStack>
-          <Text ml={10}  fontWeight="normal">
+          <Text ml={10} fontWeight="normal">
             {task.text}
           </Text>
           <Button
@@ -33,7 +33,12 @@ const Task = ({ task, onDelete, onToggle }) => (
         </HStack>
         <Text m={1}>{task.day} </Text>
         {task.reminder && (
-          <Heading mb={15} textColor="red.500" fontSize={20} fontWeight="normal">
+          <Heading
+            mb={15}
+            textColor="red.500"
+            fontSize={20}
+            fontWeight="normal"
+          >
             This is important!
           </Heading>
         )}

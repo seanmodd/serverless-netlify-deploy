@@ -1,32 +1,8 @@
-import { Button } from '@chakra-ui/button';
+
 import { useState, useEffect } from 'react';
 
-import {
-  Flex,
-  Grid,
-  Heading,
-  Stack,
-  VStack,
-  Fade,
-  ScaleFade,
-  Slide,
-  SlideFade,
-  HStack,
-  Box,
-} from '@chakra-ui/layout';
-import {
-  Table,
-  Thead,
-  Tbody,
-  Tfoot,
-  Tr,
-  Th,
-  Td,
-  TableCaption,
-} from '@chakra-ui/react';
-import { useCounter } from '../../components/hooks/useCounter';
-import { useToggle } from '../../components/hooks/useToggle';
-import Task from '../../components/traversy/Task';
+import { Heading, VStack } from '@chakra-ui/layout';
+
 import Tasks from '../../components/traversy/Tasks';
 import AddTask from '../../components/traversy/AddTask';
 import FormButton from '../../components/traversy/FormButton';
