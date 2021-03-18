@@ -13,7 +13,7 @@ export default function myIndex() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
+
       <Hero />
 
       <Newsletter />
@@ -22,7 +22,7 @@ export default function myIndex() {
         <Heading textColor="blue.500">Here</Heading>
 
         <PersonalList />
-      </Flex>
+     
     </div>
   );
 }
