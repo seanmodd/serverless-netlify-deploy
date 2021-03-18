@@ -9,20 +9,22 @@ import Footer from '../components/chakraPro/FooterWithFourColumns/Footer';
 
 export default function Home() {
   return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <Flex className="container">
+        <Head>
+          <title>Next.js Starter!</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-      <Hero />
-      <Newsletter />
-      <Flex flexDirection="column" alignItems="center" width="100%">
-        <Heading textColor="blue.500">Here</Heading>
+        <Hero />
+        <Newsletter />
+        <Flex flexDirection="column" alignItems="center" width="100%">
+          <Heading textColor="blue.500">Here</Heading>
 
-        <PersonalList />
+          <PersonalList />
+        </Flex>
+        <Footer />
       </Flex>
-      <Footer />
-    </div>
+    </>
   );
 }

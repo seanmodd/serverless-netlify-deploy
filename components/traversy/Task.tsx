@@ -5,7 +5,7 @@ import { Flex, Heading, HStack, Spacer, Text, VStack } from '@chakra-ui/layout';
 import classes from './contact-form.module.css';
 
 const Task = ({ task, onDelete, onToggle }) => (
-  <div>
+  <>
     <Flex
       align="center"
       w="800px"
@@ -53,7 +53,7 @@ const Task = ({ task, onDelete, onToggle }) => (
         }}
       />
     </Flex>
-  </div>
+  </>
 );
 
 export default Task;

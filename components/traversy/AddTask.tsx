@@ -31,32 +31,34 @@ const AddTask = ({ onAdd }) => {
 
   return (
     <>
-      <form onSubmit={onSubmit}>
-        <VStack m={15} p={15}>
-          <Input
-            placeholder="text"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-          />
-          <Input
-            placeholder="date and time"
-            value={day}
-            onChange={(e) => setDay(e.target.value)}
-          />
-        </VStack>
-        <Flex>
-          <FormLabel>Set Reminder</FormLabel>
-          <Checkbox
-            type="checkbox"
-            // value={reminder}
-            checked={reminder}
-            onChange={(e) => setReminder(e.currentTarget.checked)}
-          />
-        </Flex>
-        <Button type="submit" bg="black" textColor="white">
-          Save Task
-        </Button>
-      </form>
+      <Flex>
+        <form onSubmit={onSubmit}>
+          <VStack m={15} p={15}>
+            <Input
+              placeholder="text"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            />
+            <Input
+              placeholder="date and time"
+              value={day}
+              onChange={(e) => setDay(e.target.value)}
+            />
+          </VStack>
+          <Flex>
+            <FormLabel>Set Reminder</FormLabel>
+            <Checkbox
+              type="checkbox"
+              // value={reminder}
+              checked={reminder}
+              onChange={(e) => setReminder(e.currentTarget.checked)}
+            />
+          </Flex>
+          <Button type="submit" bg="black" textColor="white">
+            Save Task
+          </Button>
+        </form>
+      </Flex>
     </>
   );
 };
