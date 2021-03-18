@@ -13,10 +13,11 @@ import {
 import { HTMLMotionProps, motion, Variants } from 'framer-motion';
 import * as React from 'react';
 import FocusLock from 'react-focus-lock';
+import NextLink from 'next/link';
 import {
-  HiBookOpen,
+  HiEmojiHappy,
   HiCloudDownload,
-  HiCurrencyDollar,
+  HiExclamationCircle,
   HiOutlineMenu,
   HiOutlineX,
   HiQuestionMarkCircle,
@@ -134,8 +135,12 @@ export const MobileNav = () => {
               </Flex>
               <SimpleGrid as="nav" gap="6" mt="8" columns={{ base: 1, sm: 2 }}>
                 <NavLink.Mobile icon={HiCloudDownload}>Product</NavLink.Mobile>
-                <NavLink.Mobile icon={HiCurrencyDollar}>Pricing</NavLink.Mobile>
-                <NavLink.Mobile icon={HiBookOpen}>Resources</NavLink.Mobile>
+                <NavLink.Mobile icon={HiExclamationCircle}>
+                  <NextLink href="/youtube/tasktracker#" passHref>
+                    To-Do List
+                  </NextLink>
+                </NavLink.Mobile>
+                <NavLink.Mobile icon={HiEmojiHappy}>Resources</NavLink.Mobile>
                 <NavLink.Mobile icon={HiQuestionMarkCircle}>
                   Help
                 </NavLink.Mobile>
