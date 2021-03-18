@@ -6,7 +6,7 @@ import Tasks from '../../components/traversy/Tasks';
 import AddTask from '../../components/traversy/AddTask';
 import FormButton from '../../components/traversy/FormButton';
 
-function toggle() {
+function App() {
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -29,21 +29,21 @@ function toggle() {
   ]);
 
   // useEffect async to get it from server
-  useEffect(() => {
-    const getTasks = async () => {
-      const tasksFromServer = await fetchTasks();
-      setTasks(tasksFromServer);
-    };
-    getTasks();
-  }, []);
+  // useEffect(() => {
+  //   const getTasks = async () => {
+  //     const tasksFromServer = await fetchTasks();
+  //     setTasks(tasksFromServer);
+  //   };
+  //   getTasks();
+  // }, []);
 
   // originally a part of the useEffect above when first building this
-  const fetchTasks = async () => {
-    const res = await fetch('http://localhost:5000/tasks');
-    const data = await res.json();
+  // const fetchTasks = async () => {
+  //   const res = await fetch('http://localhost:5000/tasks');
+  //   const data = await res.json();
 
-    return data;
-  };
+  //   return data;
+  // };
 
   // delete tasks
   const deleteTask = (id) => {
@@ -159,4 +159,4 @@ function toggle() {
   );
 }
 
-export default toggle;
+export default App;

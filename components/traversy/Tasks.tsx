@@ -7,7 +7,7 @@ const Tasks = ({ tasks, onDelete, onToggle }) => (
   <>
     <Flex alignItems="center" />
     {tasks.map((task, index) => (
-      <Task key={index} task={task} onDelete={onDelete} onToggle={onToggle} />
+      <Task key={task.id} task={task} onDelete={onDelete} onToggle={onToggle} />
     ))}
   </>
 );
