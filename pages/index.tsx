@@ -10,7 +10,7 @@ import Footer from '../components/chakraPro/FooterWithFourColumns/Footer';
 export default function Home() {
   return (
     <>
-      <Flex className="container">
+      <Flex flexDirection="column" className="container">
         <Head>
           <title>Next.js Starter!</title>
           <link rel="icon" href="/favicon.ico" />
