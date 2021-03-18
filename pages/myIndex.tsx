@@ -7,7 +7,7 @@ import Newsletter from '../components/chakraPro/NewsletterWithDarkBg/Newsletter'
 
 export default function myIndex() {
   return (
-    <div className="container">
+    <Flex className="container">
       <Head>
         <title>Next.js Starter!</title>
         <link rel="icon" href="/favicon.ico" />
@@ -23,6 +23,6 @@ export default function myIndex() {
 
         <PersonalList />
      
-    </div>
+    </Flex>
   );
 }
