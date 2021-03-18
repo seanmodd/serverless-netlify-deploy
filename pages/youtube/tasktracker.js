@@ -105,7 +105,7 @@ function toggle() {
 
   return (
     <>
-      <Flex h="60vh">
+      <Flex h="auto">
         <VStack>
           <Heading fontWeight="500" mt={10} mb={4}>
             The Task Tracker App
