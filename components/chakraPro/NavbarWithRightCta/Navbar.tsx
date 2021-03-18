@@ -28,15 +28,21 @@ const Navbar = () => (
               </Box>
               <DarkModeSwitch />
               <HStack display={{ base: 'none', lg: 'flex' }} spacing="8">
-                <NavLink.Desktop active>Product</NavLink.Desktop>
-
+                <NavLink.Desktop active>
+                  <NextLink href="/#" passHref>
+                    Home Page
+                  </NextLink>
+                </NavLink.Desktop>
                 <NavLink.Desktop>
                   <NextLink href="/youtube/tasktracker#" passHref>
                     To-Do List
                   </NextLink>
                 </NavLink.Desktop>
-
-                <NavLink.Desktop>Resources</NavLink.Desktop>
+                <NavLink.Desktop>
+                  <NextLink href="/myIndex" passHref>
+                    My Index aka Tester Page
+                  </NextLink>
+                </NavLink.Desktop>
                 <NavLink.Desktop>Help</NavLink.Desktop>
               </HStack>
             </HStack>

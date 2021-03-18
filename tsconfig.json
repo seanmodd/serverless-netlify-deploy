@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/index.tsx", "pages/youtube/tasktracker.js"  ],
+, "pages/index.tsx", "pages/youtube/tasktracker.js", "components/chakraPro/NavbarWithRightCta/MobileNav.tsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -16,7 +16,7 @@ import FocusLock from 'react-focus-lock';
 import NextLink from 'next/link';
 import {
   HiEmojiHappy,
-  HiCloudDownload,
+  HiHome,
   HiExclamationCircle,
   HiOutlineMenu,
   HiOutlineX,
@@ -134,13 +134,21 @@ export const MobileNav = () => {
                 </Box>
               </Flex>
               <SimpleGrid as="nav" gap="6" mt="8" columns={{ base: 1, sm: 2 }}>
-                <NavLink.Mobile icon={HiCloudDownload}>Product</NavLink.Mobile>
+                <NavLink.Mobile icon={HiHome}>
+                  <NextLink href="/#" passHref>
+                    Home Page
+                  </NextLink>
+                </NavLink.Mobile>
                 <NavLink.Mobile icon={HiExclamationCircle}>
                   <NextLink href="/youtube/tasktracker#" passHref>
                     To-Do List
                   </NextLink>
                 </NavLink.Mobile>
-                <NavLink.Mobile icon={HiEmojiHappy}>Resources</NavLink.Mobile>
+                <NavLink.Mobile icon={HiEmojiHappy}>
+                  <NextLink href="/myIndex" passHref>
+                    myIndex Tester Page
+                  </NextLink>
+                </NavLink.Mobile>
                 <NavLink.Mobile icon={HiQuestionMarkCircle}>
                   Help
                 </NavLink.Mobile>
