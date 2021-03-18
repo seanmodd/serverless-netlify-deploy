@@ -7,6 +7,7 @@ import {
   Spacer,
 } from '@chakra-ui/react';
 import { jsx, useTheme, Global, css } from '@emotion/react';
+import Footer from '../components/chakraPro/FooterWithFourColumns/Footer';
 import Navbar from '../components/chakraPro/NavbarWithRightCta/Navbar';
 import customTheme from '../styles/theme';
 
@@ -21,7 +22,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <ChakraProvider resetCSS theme={customTheme}>
         <Navbar />
-        <Spacer />
+
         <Flex direction="column">
           <ColorModeProvider
             options={{
@@ -36,6 +37,7 @@ function MyApp({ Component, pageProps }) {
             </Flex>
           </ColorModeProvider>
         </Flex>
+        <Footer />
       </ChakraProvider>
     </>
   );

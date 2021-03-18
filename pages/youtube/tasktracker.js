@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from 'react';
 
-import { Heading, VStack } from '@chakra-ui/layout';
+import { Flex, Heading, VStack } from '@chakra-ui/layout';
 
 import Tasks from '../../components/traversy/Tasks';
 import AddTask from '../../components/traversy/AddTask';
@@ -106,35 +105,37 @@ function toggle() {
 
   return (
     <>
-      <VStack>
-        <Heading fontWeight="500" mt={10} mb={4}>
-          The Task Tracker App
-        </Heading>{' '}
-        <FormButton onAdd={() => setShowForm(!showForm)} />
-        {tasks.length > 0 && (
-          <Heading fontSize={28} fontWeight="300">
-            {tasks.length} tasks!
-          </Heading>
-        )}
-        {showForm && <AddTask onAdd={addTask} />}
-        {tasks.length > 0 ? (
-          <Tasks
-            tasks={tasks}
-            onDelete={deleteTask}
-            onToggle={reminderToggle}
-          />
-        ) : (
-          <Heading
-            mt={100}
-            pt={40}
-            fontWeight="normal"
-            fontSize={80}
-            textColor="red.500"
-          >
-            No tasks to show!
-          </Heading>
-        )}
-      </VStack>
+      <Flex h="60vh">
+        <VStack>
+          <Heading fontWeight="500" mt={10} mb={4}>
+            The Task Tracker App
+          </Heading>{' '}
+          <FormButton onAdd={() => setShowForm(!showForm)} />
+          {tasks.length > 0 && (
+            <Heading fontSize={28} fontWeight="300">
+              {tasks.length} tasks!
+            </Heading>
+          )}
+          {showForm && <AddTask onAdd={addTask} />}
+          {tasks.length > 0 ? (
+            <Tasks
+              tasks={tasks}
+              onDelete={deleteTask}
+              onToggle={reminderToggle}
+            />
+          ) : (
+            <Heading
+              my={100}
+              pt={40}
+              fontWeight="normal"
+              fontSize={80}
+              textColor="red.500"
+            >
+              No tasks to show!
+            </Heading>
+          )}
+        </VStack>
+      </Flex>
     </>
   );
 }
