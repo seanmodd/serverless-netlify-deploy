@@ -14,7 +14,6 @@ export default function Home() {
         <title>Next.js Starter!</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
 
       <Hero />
       <Newsletter />

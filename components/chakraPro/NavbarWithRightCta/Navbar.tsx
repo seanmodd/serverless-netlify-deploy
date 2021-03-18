@@ -3,10 +3,13 @@ import {
   Button,
   Flex,
   HStack,
+  Link,
   useColorModeValue as mode,
   VisuallyHidden,
 } from '@chakra-ui/react';
+import { Link as ReachLink } from '@reach/router';
 import * as React from 'react';
+import NextLink from 'next/link';
 import DarkModeSwitch from './DarkModeSwitch';
 import { Logo } from './Logo';
 import { MobileNav } from './MobileNav';
@@ -26,7 +29,13 @@ const Navbar = () => (
               <DarkModeSwitch />
               <HStack display={{ base: 'none', lg: 'flex' }} spacing="8">
                 <NavLink.Desktop active>Product</NavLink.Desktop>
-                <NavLink.Desktop>Pricing</NavLink.Desktop>
+
+                <NavLink.Desktop>
+                  <NextLink href="/youtube/tasktracker#" passHref>
+                    To-Do List
+                  </NextLink>
+                </NavLink.Desktop>
+
                 <NavLink.Desktop>Resources</NavLink.Desktop>
                 <NavLink.Desktop>Help</NavLink.Desktop>
               </HStack>
