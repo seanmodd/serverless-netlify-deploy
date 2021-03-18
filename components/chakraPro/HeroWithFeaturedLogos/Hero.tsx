@@ -9,6 +9,7 @@ import {
   useColorModeValue as mode,
 } from '@chakra-ui/react';
 import * as React from 'react';
+import NextLink from 'next/link';
 import Newsletter from '../NewsletterWithDarkBg/Newsletter';
 import * as Logos from './Brands';
 
@@ -44,7 +45,9 @@ function Hero() {
               All-in-one online form & survey builder
             </Heading>
             <Button size="xl" variant="with-shadow">
-              Welcome
+              <NextLink href="/youtube/tasktracker" passHref>
+                Welcome
+              </NextLink>
             </Button>
             <Text color={mode('gray.900', 'gray.100')} mt="5" fontSize="xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
