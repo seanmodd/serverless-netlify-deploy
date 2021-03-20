@@ -22,7 +22,7 @@ function App() {
     },
     {
       id: 3,
-      text: 'Firefighters',
+      text: 'Warriors',
       day: 'Apr 5th at 2:30pm',
       reminder: true,
     },
