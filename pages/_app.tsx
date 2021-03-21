@@ -21,22 +21,17 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <ChakraProvider resetCSS theme={customTheme}>
-        <Navbar />
+        <ColorModeProvider
+          options={{
+            initialColorMode: 'light',
+            useSystemColorMode: true,
+          }}
+        >
+          <GlobalStyle>
+            <Component {...pageProps} />
+          </GlobalStyle>
+        </ColorModeProvider>
 
-        <Flex direction="column">
-          <ColorModeProvider
-            options={{
-              initialColorMode: 'light',
-              useSystemColorMode: true,
-            }}
-          >
-            <Flex justify="center" align="center" w="100%" h="auto" mt="70">
-              <GlobalStyle>
-                <Component {...pageProps} />
-              </GlobalStyle>
-            </Flex>
-          </ColorModeProvider>
-        </Flex>
         <Footer />
       </ChakraProvider>
     </>

@@ -1,18 +1,4 @@
-.contact {
-
-  border-radius: 6px;
-  border-left-color: rgb(255, 0, 0);
-  border-left-width: 20px;
-  background-color: rebeccapurple;
-  width: 90%;
-  padding: 10px;
-  
-  max-width: 50rem;
-  box-shadow: 0 1px 4px rgba(111, 3, 3, 0.688);
-  font-size: var(--size-6);
-}
-
-.othercontact {
+.contact .othercontact {
   margin: 10;
   border-radius: 6px;
   border-left-color: rgb(235, 235, 235);
@@ -39,7 +25,7 @@
   margin: var(--size-2) 0 var(--size-1) 0;
 }
 
-.form  {
+.form {
   font: inherit;
   padding: var(--size-1);
   border-radius: 4px;
@@ -77,8 +63,8 @@
 }
 
 .form button:hover {
-  background-color: var(--color-primary-500);
-  border-color: var(--color-primary-500);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(0, 0, 0, 1);
 }
 
 @media (min-width: 768px) {

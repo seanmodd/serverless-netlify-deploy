@@ -18,13 +18,17 @@ import { NavLink } from './NavLink';
 const Navbar = () => (
   <>
     <Box w="100%" sx={{ position: 'fixed', zIndex: 10 }}>
-      <Box as="header" bg={mode('white', 'gray.800')} borderBottomWidth="1px">
+      <Box
+        as="header"
+        bg={mode('gray.100', 'gray.800')}
+        borderBottomWidth="1px"
+      >
         <Box maxW="7xl" mx="auto" py="4" px={{ base: '6', md: '8' }}>
           <Flex as="nav" justify="space-between">
             <HStack spacing="8">
               <Box as="a" href="#" rel="home">
                 <VisuallyHidden>Envelope app</VisuallyHidden>
-                <Logo h="6" iconColor="blue.500" />
+                <Logo h="6" iconColor="gray.500" />
               </Box>
               <DarkModeSwitch />
               <HStack display={{ base: 'none', lg: 'flex' }} spacing="8">
@@ -49,7 +53,7 @@ const Navbar = () => (
             <Flex align="center">
               <HStack spacing="8" display={{ base: 'none', md: 'flex' }}>
                 <NavLink.Desktop>Log in </NavLink.Desktop>
-                <Button colorScheme="blue" rounded="full">
+                <Button colorScheme="whatsapp" rounded="full">
                   Start Free Trial
                 </Button>
               </HStack>

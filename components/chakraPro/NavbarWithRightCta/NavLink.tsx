@@ -18,11 +18,11 @@ const DesktopNavLink = (props: DesktopNavLinkProps) => {
     <chakra.a
       href="#"
       aria-current={active ? 'page' : undefined}
-      fontWeight="semibold"
+      fontWeight="normal"
       color={mode('gray.600', 'gray.300')}
       {...rest}
       _activeLink={{
-        color: mode('blue.600', 'blue.300'),
+        color: mode('gray.900', 'gray.50'),
         fontWeight: 'bold',
       }}
     />
@@ -49,7 +49,7 @@ const MobileNavLink = (props: MobileNavLinkProps) => {
       cursor="pointer"
       _hover={{ bg: mode('gray.50', 'gray.600') }}
     >
-      <Icon as={icon} color={mode('blue.600', 'blue.400')} fontSize="xl" />
+      <Icon as={icon} color={mode('gray.900', 'gray.50')} fontSize="xl" />
       <Box marginStart="3" fontWeight="medium">
         {children}
       </Box>

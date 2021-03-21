@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "kdcro101.favorites",
-    "gogocrow.jsx-beautify"
+    "gogocrow.jsx-beautify",
+    "danielsousadev.styled-components-snippets"
   ]
 }

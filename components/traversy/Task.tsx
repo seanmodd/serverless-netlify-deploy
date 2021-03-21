@@ -1,58 +1,42 @@
 import { Button, IconButton } from '@chakra-ui/button';
+import { useColorModeValue as mode } from '@chakra-ui/color-mode';
 import { CloseIcon, WarningIcon } from '@chakra-ui/icons';
 import { Flex, Heading, HStack, Spacer, Text, VStack } from '@chakra-ui/layout';
-
+import { css, jsx } from '@emotion/react';
+import styled from 'styled-components';
+import { SeanButton, SeanFlex } from './ButtonU';
 import classes from './contact-form.module.css';
 
-const Task = ({ task, onDelete, onToggle }) => (
+const Task = ({ task }) => (
   <>
-    <Flex
-      align="center"
-      w="800px"
-      bg="gray.50"
-      className={
-        (classes.seanFlex,
-        task.reminder ? classes.contact : classes.othercontact)
-      }
-    >
+    <SeanFlex w="500px" bg={mode('gray.100', 'gray.800')}>
       <VStack>
         <HStack>
-          <Text ml={10} fontWeight="normal">
+          <Text
+            fontSize={30}
+            color={mode('grey.900', 'gray.50')}
+            ml={10}
+            fontWeight="semibold"
+          >
             {task.text}
           </Text>
-          <Button
-            mt={20}
-            fontSize={22}
-            cursor="pointer"
-            onClick={() => {
-              onToggle(task.id);
-            }}
-          >
+          <Spacer />
+          <Button ml={10} colorScheme="red" cursor="pointer">
             ?!?
           </Button>
         </HStack>
-        <Text m={1}>{task.day} </Text>
+        <Text color={mode('grey.900', 'gray.50')} m={1}>
+          Date: {task.day}
+        </Text>
         {task.reminder && (
-          <Heading
-            mb={15}
-            textColor="red.500"
-            fontSize={20}
-            fontWeight="normal"
-          >
-            This is important!
+          <Heading mb={15} textColor="red.500" fontSize={20} fontWeight="bold">
+            Reminder!
           </Heading>
         )}
       </VStack>
       <Spacer />
-      <CloseIcon
-        cursor="pointer"
-        color="red.500"
-        m={5}
-        onClick={() => {
-          onDelete(task.id);
-        }}
-      />
-    </Flex>
+      <CloseIcon cursor="pointer" color="red.500" m={5} />
+    </SeanFlex>
   </>
 );
 
