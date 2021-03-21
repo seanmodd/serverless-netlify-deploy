@@ -10,6 +10,11 @@ import { jsx, useTheme, Global, css } from '@emotion/react';
 import Footer from '../components/chakraPro/FooterWithFourColumns/Footer';
 import Navbar from '../components/chakraPro/NavbarWithRightCta/Navbar';
 import customTheme from '../styles/theme';
+import '../styles/globals.scss';
+import LightTheme from '../styles/light';
+import DarkTheme from '../styles/dark';
+import { useState } from 'react';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();

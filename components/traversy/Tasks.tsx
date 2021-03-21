@@ -1,20 +1,14 @@
 import { useColorModeValue as mode } from '@chakra-ui/color-mode';
-import { Button } from '@chakra-ui/button';
 import { Flex, Heading } from '@chakra-ui/layout';
-import styled from 'styled-components';
-import AddTask from './AddTask';
+import { css, jsx } from '@emotion/react';
 import Task from './Task';
-import { SeanButton } from './ButtonU';
+import { MyButton, MyButtonChakra } from './Styled';
 
 const Tasks = ({ tasks }) => (
   <>
-    <SeanButton
-      bg={mode('gray.900', 'gray.100')}
-      textColor={mode('gray.100', 'gray.900')}
-    >
-      Sean Button Test
-    </SeanButton>
-    <SeanButton>Here is a test</SeanButton>
+    {tasks.length > 0 && (
+      <Heading fontWeight="normal">{tasks.length} tasks!</Heading>
+    )}
     <Flex alignItems="center" />
     {tasks.map((task) => (
       <Task key={task.id} task={task} />
@@ -23,3 +17,13 @@ const Tasks = ({ tasks }) => (
 );
 
 export default Tasks;
+
+// {tasks.length > 0 && (
+//   <Heading
+//     css={css`
+//       font-size: 44px;
+//       font-weight: 'bold';
+//     `}
+//   >
+//     {tasks.length} tasks!
+//   </Heading>

@@ -43,37 +43,38 @@ const fontSizes = {
 //   fontSizes,
 //   // breakpoints,
 // // };
-// const myTheme = {
-//   components: {
-//     Button: {
-//       // 1. We can update the base styles
-//       baseStyle: {
-//         fontWeight: 'normal',
+const myTheme = {
+  components: {
+    Button: {
+      // 1. We can update the base styles
+      baseStyle: {
+        fontWeight: 'normal',
+        boxShadow: '0 0 2px 2px #efdfde',
 
-//         // Normally, it is "semibold"
-//       },
-//       // 2. We can add a new button size or extend existing
-//       sizes: {
-//         xl: {
-//           h: '100px',
-//           fontSize: 'lg',
-//           px: '32px',
-//         },
-//       },
-//       // 3. We can add a new visual variant
-//       variants: {
-//         'with-shadow': {
-//           bg: 'blue.400',
-//           boxShadow: '0 0 2px 2px #efdfde',
-//         },
-//         // 4. We can override existing variants
-//         solid: (props) => ({
-//           bg: props.colorMode === 'dark' ? 'red.300' : 'red.500',
-//         }),
-//       },
-//     },
-//   },
-// };
+        // Normally, it is "semibold"
+      },
+      // 2. We can add a new button size or extend existing
+      sizes: {
+        xl: {
+          h: '100px',
+          fontSize: 'lg',
+          px: '32px',
+        },
+      },
+      // 3. We can add a new visual variant
+      variants: {
+        'with-shadow': {
+          bg: 'blue.400',
+          boxShadow: '0 0 2px 2px #efdfde',
+        },
+        // 4. We can override existing variants
+        solid: (props) => ({
+          bg: props.colorMode === 'dark' ? 'red.300' : 'red.500',
+        }),
+      },
+    },
+  },
+};
 
 const overrides = {
   styles: {
@@ -100,6 +101,7 @@ const customTheme = extendTheme({
   breakpoints,
   fontSizes,
   overrides,
+  myTheme,
 });
 
 export default customTheme;

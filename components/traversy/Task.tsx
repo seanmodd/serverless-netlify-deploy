@@ -4,7 +4,7 @@ import { CloseIcon, WarningIcon } from '@chakra-ui/icons';
 import { Flex, Heading, HStack, Spacer, Text, VStack } from '@chakra-ui/layout';
 import { css, jsx } from '@emotion/react';
 import styled from 'styled-components';
-import { SeanButton, SeanFlex } from './ButtonU';
+import { MyButton, SeanButton, SeanFlex } from './Styled';
 import classes from './contact-form.module.css';
 
 const Task = ({ task }) => (
@@ -20,10 +20,6 @@ const Task = ({ task }) => (
           >
             {task.text}
           </Text>
-          <Spacer />
-          <Button ml={10} colorScheme="red" cursor="pointer">
-            ?!?
-          </Button>
         </HStack>
         <Text color={mode('grey.900', 'gray.50')} m={1}>
           Date: {task.day}
@@ -34,8 +30,13 @@ const Task = ({ task }) => (
           </Heading>
         )}
       </VStack>
+
       <Spacer />
-      <CloseIcon cursor="pointer" color="red.500" m={5} />
+      <VStack>
+        <CloseIcon cursor="pointer" color="red.500" mt={3} ml={4} />
+        <Spacer />
+        <MyButton textColor={mode('sgray.100', 'gray.200')}>?!</MyButton>
+      </VStack>
     </SeanFlex>
   </>
 );
