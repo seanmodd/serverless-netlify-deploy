@@ -50,9 +50,15 @@ function App() {
         <VStack>
           <Heading
             color={mode('gray.900', 'gray.50')}
-            fontSize={65}
+            fontSize={{ base: '25px', md: '30px', lg: '35px' }}
             fontWeight="200"
             mt="100px"
+          >
+            Welcome to...
+          </Heading>
+          <Heading
+            textAlign="center"
+            fontSize={['40px', '50px', '60px', '70px']}
           >
             The Task Tracker App
           </Heading>
