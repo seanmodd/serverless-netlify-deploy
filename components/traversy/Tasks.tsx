@@ -17,13 +17,3 @@ const Tasks = ({ tasks }) => (
 );
 
 export default Tasks;
-
-// {tasks.length > 0 && (
-//   <Heading
-//     css={css`
-//       font-size: 44px;
-//       font-weight: 'bold';
-//     `}
-//   >
-//     {tasks.length} tasks!
-//   </Heading>
