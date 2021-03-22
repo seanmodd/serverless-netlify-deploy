@@ -45,13 +45,14 @@ function App() {
         alignItems="center"
         justifyContent="center"
         bg={mode('gray.50', 'gray.800')}
+        pb="50px"
       >
         <VStack>
           <Heading
             color={mode('gray.900', 'gray.50')}
             fontSize={65}
             fontWeight="200"
-            mt="75px"
+            mt="100px"
           >
             The Task Tracker App
           </Heading>
