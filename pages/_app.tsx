@@ -15,7 +15,7 @@ import LightTheme from '../styles/light';
 import DarkTheme from '../styles/dark';
 import { useState } from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-
+import GoogleFonts from 'next-google-fonts'
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();
 
@@ -32,6 +32,7 @@ function MyApp({ Component, pageProps }) {
             useSystemColorMode: true,
           }}
         >
+          
           <GlobalStyle>
             <Component {...pageProps} />
           </GlobalStyle>
