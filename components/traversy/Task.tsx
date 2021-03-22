@@ -4,12 +4,12 @@ import { CloseIcon, WarningIcon } from '@chakra-ui/icons';
 import { Flex, Heading, HStack, Spacer, Text, VStack } from '@chakra-ui/layout';
 import { css, jsx } from '@emotion/react';
 import styled from 'styled-components';
-import { MyButton, SeanButton, SeanFlex } from './Styled';
+import { SeanButton, SeanFlex } from './Styled';
 import classes from './contact-form.module.css';
 
 const Task = ({ task }) => (
   <>
-    <SeanFlex w="500px" bg={mode('gray.100', 'gray.800')}>
+    <SeanFlex bg={mode('gray.100', 'gray.700')}>
       <VStack>
         <HStack>
           <Text
@@ -25,7 +25,12 @@ const Task = ({ task }) => (
           Date: {task.day}
         </Text>
         {task.reminder && (
-          <Heading mb={15} textColor="red.500" fontSize={20} fontWeight="bold">
+          <Heading
+            mb={15}
+            textColor="red.500"
+            fontSize={20}
+            fontWeight="normal"
+          >
             Reminder!
           </Heading>
         )}
@@ -35,7 +40,7 @@ const Task = ({ task }) => (
       <VStack>
         <CloseIcon cursor="pointer" color="red.500" mt={3} ml={4} />
         <Spacer />
-        <MyButton textColor={mode('sgray.100', 'gray.200')}>?!</MyButton>
+        <Button colorScheme="whatsapp">?!</Button>
       </VStack>
     </SeanFlex>
   </>

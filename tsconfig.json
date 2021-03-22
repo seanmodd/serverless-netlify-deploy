@@ -3,27 +3,29 @@
     "target": "es5",
     "lib": [
       "dom",
-      "dom.iterable",
-      "esnext"
+      "es6"
     ],
-    "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "allowJs": true,
+    "noEmit": true, // No compilation. Type-check only
+    "pretty": true, // Logs are formatted
+    "strict": false, // Get out the way
+    "esModuleInterop": true, // import without `* as x`
+    "jsx": "preserve", // Mandatory; Next implements its own optimized jsx transform
+    "sourceMap": true,
+    "module": "esnext", // To support dynamic `import()`
+    "moduleResolution": "node", // To match webpack resolution
+    "resolveJsonModule": true, // To match webpack resolution
+    "isolatedModules": true, // Required for Babel
+    // STYLE
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve"
+    "noUnusedLocals": true,
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-, "pages/index.tsx", "pages/youtube/tasktracker.js", "components/chakraPro/NavbarWithRightCta/MobileNav.tsx"  ],
+   pages/index.jstylepages/tasktracker.js
+  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "public"
   ]
 }

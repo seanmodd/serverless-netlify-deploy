@@ -38,7 +38,7 @@ const Navbar = () => (
                   </NextLink>
                 </NavLink.Desktop>
                 <NavLink.Desktop>
-                  <NextLink href="/youtube/tasktracker#" passHref>
+                  <NextLink href="/tasktracker#" passHref>
                     To-Do List
                   </NextLink>
                 </NavLink.Desktop>

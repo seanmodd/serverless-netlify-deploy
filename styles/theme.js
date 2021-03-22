@@ -2,13 +2,34 @@
 /* eslint-disable no-undef */
 import { extendTheme, theme as chakraTheme } from '@chakra-ui/react';
 import { createBreakpoints } from '@chakra-ui/theme-tools';
+import { createGlobalStyle } from 'styled-components';
+// import { $charcoal } from '@styles/colors';
+
+const GlobalStyles = createGlobalStyle`
+  html, body {
+    
+    
+    
+    
+    
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    ${'' /* color: ${$charcoal}; */}
+    background: #f6f9fc;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+`;
 
 const fonts = {
   ...chakraTheme.fonts,
-  body:
-    'Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
-  heading:
-    'Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+  body: 'Poppins',
+  heading: 'Poppins',
 };
 
 const breakpoints = createBreakpoints({
@@ -19,8 +40,8 @@ const breakpoints = createBreakpoints({
 });
 const fontWeights = {
   normal: 300,
-  medium: 600,
-  bold: 800,
+  medium: 500,
+  bold: 700,
 };
 
 const fontSizes = {
@@ -43,65 +64,66 @@ const fontSizes = {
 //   fontSizes,
 //   // breakpoints,
 // // };
-const myTheme = {
-  components: {
-    Button: {
-      // 1. We can update the base styles
-      baseStyle: {
-        fontWeight: 'normal',
-        boxShadow: '0 0 2px 2px #efdfde',
+// const myTheme = {
+//   components: {
+//     Button: {
+//       // 1. We can update the base styles
+//       baseStyle: {
+//         fontWeight: 'normal',
+//         boxShadow: '0 0 2px 2px #efdfde',
 
-        // Normally, it is "semibold"
-      },
-      // 2. We can add a new button size or extend existing
-      sizes: {
-        xl: {
-          h: '100px',
-          fontSize: 'lg',
-          px: '32px',
-        },
-      },
-      // 3. We can add a new visual variant
-      variants: {
-        'with-shadow': {
-          bg: 'blue.400',
-          boxShadow: '0 0 2px 2px #efdfde',
-        },
-        // 4. We can override existing variants
-        solid: (props) => ({
-          bg: props.colorMode === 'dark' ? 'red.300' : 'red.500',
-        }),
-      },
-    },
-  },
-};
+//         // Normally, it is "semibold"
+//       },
+//       // 2. We can add a new button size or extend existing
+//       sizes: {
+//         xl: {
+//           h: '100px',
+//           fontSize: 'lg',
+//           px: '32px',
+//         },
+//       },
+//       // 3. We can add a new visual variant
+//       variants: {
+//         'with-shadow': {
+//           bg: 'blue.400',
+//           boxShadow: '0 0 2px 2px #efdfde',
+//         },
+//         // 4. We can override existing variants
+//         solid: (props) => ({
+//           bg: props.colorMode === 'dark' ? 'red.300' : 'red.500',
+//         }),
+//       },
+//     },
+//   },
+// };
 
-const overrides = {
-  styles: {
-    global: {
-      // styles for the `body`
-      body: {
-        bg: 'red.500',
-        color: 'red.500',
-      },
-      // styles for the `a`
-      a: {
-        color: 'red.500',
-        _hover: {
-          textDecoration: 'underline',
-        },
-      },
-    },
-  },
-};
+// const overrides = {
+//   styles: {
+//     global: {
+//       // styles for the `body`
+//       body: {
+//         bg: 'red.500',
+//         color: 'red.500',
+//       },
+//       // styles for the `a`
+//       a: {
+//         color: 'red.500',
+//         _hover: {
+//           textDecoration: 'underline',
+//         },
+//       },
+//     },
+//   },
+// };
 
 const customTheme = extendTheme({
   fonts,
   fontWeights,
   breakpoints,
   fontSizes,
-  overrides,
-  myTheme,
+  GlobalStyles,
+  // overrides,
+  // myTheme,
 });
 
 export default customTheme;

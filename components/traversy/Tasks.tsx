@@ -1,13 +1,13 @@
 import { useColorModeValue as mode } from '@chakra-ui/color-mode';
 import { Flex, Heading } from '@chakra-ui/layout';
-import { css, jsx } from '@emotion/react';
 import Task from './Task';
-import { MyButton, MyButtonChakra } from './Styled';
 
 const Tasks = ({ tasks }) => (
   <>
     {tasks.length > 0 && (
-      <Heading fontWeight="normal">{tasks.length} tasks!</Heading>
+      <Heading color={mode('gray.900', 'gray.50')} fontWeight="normal">
+        {tasks.length} tasks!
+      </Heading>
     )}
     <Flex alignItems="center" />
     {tasks.map((task) => (

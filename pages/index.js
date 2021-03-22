@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { useColorModeValue as mode } from '@chakra-ui/color-mode';
 import { Flex, Heading, VStack } from '@chakra-ui/layout';
 import { css, jsx } from '@emotion/react';
-import Tasks from '../../components/traversy/Tasks';
-import FormButton from '../../components/traversy/FormButton';
-import Navbar from '../../components/chakraPro/NavbarWithRightCta/Navbar';
-import { MyFlex } from '../../components/traversy/Styled';
+import Tasks from '../components/traversy/Tasks';
+import FormButton from '../components/traversy/FormButton';
+import Navbar from '../components/chakraPro/NavbarWithRightCta/Navbar';
+import { MyFlex } from '../components/traversy/Styled';
 
 function App() {
   const [tasks, setTasks] = useState([
@@ -41,11 +41,20 @@ function App() {
   return (
     <>
       <Navbar />
-      <MyFlex bg={mode('gray.50', 'gray.800')}>
+      <MyFlex
+        alignItems="center"
+        justifyContent="center"
+        bg={mode('gray.50', 'gray.800')}
+      >
         <VStack>
-          <Heading fontWeight="500" mt="100px" mb={4}>
+          <Heading
+            color={mode('gray.900', 'gray.50')}
+            fontSize={65}
+            fontWeight="200"
+            mt="75px"
+          >
             The Task Tracker App
-          </Heading>{' '}
+          </Heading>
           <FormButton />
           {tasks.length > 0 ? (
             <Tasks tasks={tasks} />

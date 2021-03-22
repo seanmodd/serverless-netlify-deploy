@@ -17,7 +17,7 @@ import { footerLinks, links, socialLinks } from './_data';
 
 function Footer() {
   return (
-    <Box mt="150" as="footer" bg="blue.600" color="white" py="64px">
+    <Box as="footer" bg="blue.600" color="white" py="64px">
       <Box maxW="7xl" px="8" mx="auto">
         <Flex
           direction={{ base: 'column', lg: 'row' }}
