@@ -49,8 +49,8 @@ const Navbar = () => (
                   </NextLink>
                 </NavLink.Desktop>
                 <NavLink.Desktop>
-                  <NextLink href="/weather" passHref>
-                    Weather
+                  <NextLink href="/search-api" passHref>
+                    Search API
                   </NextLink>
                 </NavLink.Desktop>
               </HStack>
