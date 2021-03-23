@@ -1,11 +1,12 @@
 import { Button, IconButton } from '@chakra-ui/button';
 import { useColorModeValue as mode } from '@chakra-ui/color-mode';
-import { CloseIcon, WarningIcon } from '@chakra-ui/icons';
+import { CloseIcon, Icon, WarningIcon } from '@chakra-ui/icons';
 import { Flex, Heading, HStack, Spacer, Text, VStack } from '@chakra-ui/layout';
-import { css, jsx } from '@emotion/react';
+import { css as emoCSS } from 'emotion';
 import styled from 'styled-components';
 import { SeanButton, SeanFlex } from './Styled';
 import classes from './contact-form.module.css';
+import styles from './condit.css';
 
 const NewFlex = ({ children }) => (
   <>
@@ -88,6 +89,9 @@ const SideReminder = ({ children }) => (
     </Heading>
   </>
 );
+const myIcon = () => <IconButton icon={<SearchIcon />} />;
+const TaskReminder = ({ children }) =>
+  ({ children } ? 'important!!!' : 'not important');
 
 const Task = ({ task, onDelete, onToggle }) => (
   <>
@@ -96,8 +100,11 @@ const Task = ({ task, onDelete, onToggle }) => (
         <SideText>{task.text}</SideText>
         <SideDate>{task.day}</SideDate>
         <SideReminder>{`${
-          task.reminder ? 'important!!!' : 'not important'
-        }`}</SideReminder>  
+          task.reminder ? 'important' : 'not important'
+        }`}</SideReminder>
+        <Flex className={`styles.${task.reminder ? 'reminder reminder' : ''}`}>
+          here
+        </Flex>
       </NewStack>
       <SideButton>
         <CloseIcon

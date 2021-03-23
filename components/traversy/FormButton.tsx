@@ -15,8 +15,9 @@ const pressedStyle = {
   textShadow: '6px 6px #ff00ae',
   fontWeight: '400',
 };
-const NewButton = ({ children }) => (
-  <>
+
+const FormButton = ({ onAdd, toggleForm, text }) => (
+  <div>
     <Button
       transition="0.1s"
       boxShadow="3px 3px 3px 3px rgba(0, 0, 255, 0.2)"
@@ -24,15 +25,10 @@ const NewButton = ({ children }) => (
       color="white"
       _hover={hoverStyle}
       _active={pressedStyle}
+      onClick={toggleForm}
     >
-      {children}
+      Add?
     </Button>
-  </>
-);
-
-const FormButton = ({ onAdd, showAdd, text }) => (
-  <div>
-    <NewButton>Form Button</NewButton>
   </div>
 );
 

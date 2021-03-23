@@ -82,6 +82,7 @@ function App() {
   ]);
   // state toggles for showing and hiding the form
   const [showForm, setShowForm] = useState(false);
+
   // delete tasks
   const deleteTask = (taskId) => {
     setTasksList(tasksList.filter((task) => task.id !== taskId));
@@ -109,8 +110,8 @@ function App() {
         <VStack>
           <OtherSideHeading>Welcome to...</OtherSideHeading>
           <SideHeading>The Task Tracker App</SideHeading>
-          <FormButton />
-          <AddTask addTask={addTask} />
+          <FormButton toggleForm={() => setShowForm(!showForm)} />
+          {showForm && <AddTask addTask={addTask} />}
           {tasksList.length > 0 ? (
             <Tasks
               tasks={tasksList}

@@ -1,0 +1,26 @@
+.myclass {
+  margin: 10;
+  border-radius: 6px;
+  border-left-color: rgb(235, 235, 235);
+  border-left-width: 20px;
+  background-color: rebeccapurple;
+  width: 90%;
+  height: 120px;
+  max-width: 50rem;
+  padding: var(--size-4);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  font-size: var(--size-6);
+}
+
+.reminder {
+  font-size: 8px;
+  font-width: 800;
+  border-left-color: rgb(235, 235, 235);
+  border-left-width: 20px;
+  width: 90%;
+  height: 120px;
+
+  margin: 0;
+  text-align: right;
+  background-color: rebeccapurple;
+}
