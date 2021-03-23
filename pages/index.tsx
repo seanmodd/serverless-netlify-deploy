@@ -14,6 +14,7 @@ const SideFlex = ({ children }) => (
   <>
     <MyFlex
       alignItems="center"
+      textAlign="center"
       justifyContent="center"
       bg={mode('gray.50', 'gray.800')}
       pb="50px"
@@ -32,6 +33,10 @@ const pressedStyle = {
 const SideHeading = ({ children }) => (
   <>
     <Heading
+      alignItems="center"
+      textAlign="center"
+      justifyContent="center"
+      mb={10}
       textShadow="3px 3px #ff00ae"
       fontSize={['40px', '50px', '60px', '70px']}
       _hover={pressedStyle}
