@@ -45,6 +45,21 @@ const SideHeading = ({ children }) => (
     </Heading>
   </>
 );
+const SmallSideHeading = ({ children }) => (
+  <>
+    <Heading
+      alignItems="center"
+      textAlign="center"
+      justifyContent="center"
+      mb={10}
+      textShadow="3px 3px #ff00ae"
+      fontSize={['20px', '30px', '40px', '50px']}
+      _hover={pressedStyle}
+    >
+      {children}
+    </Heading>
+  </>
+);
 
 const OtherSideHeading = ({ children }) => (
   <>
@@ -59,89 +74,48 @@ const OtherSideHeading = ({ children }) => (
   </>
 );
 
-//! below is where the function starts
-
 function App() {
-  const [tasksList, setTasksList] = useState([]);
-
-  useEffect(() => {
-    const getTasks = async () => {
-      const tasksFromServer = await fetchTasks();
-      setTasksList(tasksFromServer);
-    };
-
-    getTasks();
-  }, []);
-
-  // Fetch Tasks
-  const fetchTasks = async () => {
-    const res = await fetch('http://localhost:5000/tasks');
-    const data = await res.json();
-
-    return data;
-  };
-
-  // Fetch Task
-  const fetchTask = async (id) => {
-    const res = await fetch(`http://localhost:5000/tasks/${id}`);
-    const data = await res.json();
-
-    return data;
-  };
-
+  const [tasksList, setTasksList] = useState([
+    {
+      id: 1,
+      text: 'Doctors',
+      day: 'Feb 5th at 2:30pm',
+      reminder: false,
+    },
+    {
+      id: 2,
+      text: 'Teachers',
+      day: 'Mar 5th at 2:30pm',
+      reminder: false,
+    },
+    {
+      id: 3,
+      text: 'Warriors',
+      day: 'Apr 5th at 2:30pm',
+      reminder: true,
+    },
+  ]);
   // state toggles for showing and hiding the form
   const [showForm, setShowForm] = useState(false);
 
   // delete tasks
-  const deleteTask = async (taskId) => {
-    await fetch(`http://localhost:5000/tasks/${taskId}`, {
-      method: 'DELETE',
-    });
-
+  const deleteTask = (taskId) => {
     setTasksList(tasksList.filter((task) => task.id !== taskId));
   };
   // adding new form items with a fake ID
-  // const addTask = (task) => {
-  // const id = Math.floor(Math.random() * 10000) + 1;
-  // const newTask = { id, ...task };
-  // setTasksList([...tasksList, newTask]);
-  // };
-  // adding tasks the right way
-
-  const addTask = async (task) => {
-    const res = await fetch('http://localhost:5000/tasks', {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify(task),
-    });
-    const data = await res.json();
-    setTasksList([...tasksList, data]);
+  const addTask = (task) => {
+    const id = Math.floor(Math.random() * 10000) + 1;
+    const newTask = { id, ...task };
+    setTasksList([...tasksList, newTask]);
   };
-
   // toggle reminder
-  const toggleReminder = async (id) => {
-    const taskToToggle = await fetchTask(id);
-    const updTask = { ...taskToToggle, reminder: !taskToToggle.reminder };
-
-    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify(updTask),
-    });
-
-    const data = await res.json();
-
+  const toggleReminder = (taskId) => {
     setTasksList(
       tasksList.map((task) =>
-        task.id === id ? { ...task, reminder: data.reminder } : task
+        task.id === taskId ? { ...task, reminder: !task.reminder } : task
       )
     );
   };
-
   // The Actual Components:
 
   return (
@@ -151,6 +125,7 @@ function App() {
         <VStack>
           <OtherSideHeading>Welcome to...</OtherSideHeading>
           <SideHeading>The Task Tracker App</SideHeading>
+          <SmallSideHeading>NO BACKEND</SmallSideHeading>
           <FormButton
             toggleForm={() => setShowForm(!showForm)}
             showAdd={showForm}

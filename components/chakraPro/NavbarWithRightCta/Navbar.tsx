@@ -39,7 +39,7 @@ const Navbar = () => (
                   </NextLink>
                 </NavLink.Desktop>
                 <NavLink.Desktop>
-                  <NextLink href="/tasktracker#" passHref>
+                  <NextLink href="/nobackend#" passHref>
                     To-Do List
                   </NextLink>
                 </NavLink.Desktop>
