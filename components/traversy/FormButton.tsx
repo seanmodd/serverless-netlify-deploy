@@ -16,18 +16,18 @@ const pressedStyle = {
   fontWeight: '400',
 };
 
-const FormButton = ({ onAdd, toggleForm, text }) => (
+const FormButton = ({ toggleForm, showAdd, text }) => (
   <div>
     <Button
       transition="0.1s"
       boxShadow="3px 3px 3px 3px rgba(0, 0, 255, 0.2)"
-      background="rgba(0,0,255,.9)"
+      background={showAdd ? 'red' : 'blue'}
       color="white"
       _hover={hoverStyle}
       _active={pressedStyle}
       onClick={toggleForm}
     >
-      Add?
+      {showAdd ? 'Close' : 'Add'}?
     </Button>
   </div>
 );

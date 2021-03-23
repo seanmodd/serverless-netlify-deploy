@@ -110,7 +110,10 @@ function App() {
         <VStack>
           <OtherSideHeading>Welcome to...</OtherSideHeading>
           <SideHeading>The Task Tracker App</SideHeading>
-          <FormButton toggleForm={() => setShowForm(!showForm)} />
+          <FormButton
+            toggleForm={() => setShowForm(!showForm)}
+            showAdd={showForm}
+          />
           {showForm && <AddTask addTask={addTask} />}
           {tasksList.length > 0 ? (
             <Tasks
