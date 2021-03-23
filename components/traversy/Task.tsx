@@ -97,7 +97,7 @@ const Task = ({ task, onDelete, onToggle }) => (
         <SideDate>{task.day}</SideDate>
         <SideReminder>{`${
           task.reminder ? 'important!!!' : 'not important'
-        }`}</SideReminder>
+        }`}</SideReminder>  
       </NewStack>
       <SideButton>
         <CloseIcon

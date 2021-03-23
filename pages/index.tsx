@@ -2,10 +2,13 @@ import { useState, useEffect } from 'react';
 import { useColorModeValue as mode } from '@chakra-ui/color-mode';
 import { Flex, Heading, VStack } from '@chakra-ui/layout';
 import { css, jsx } from '@emotion/react';
+import { AddIcon } from '@chakra-ui/icons';
+import { isTargetLikeServerless } from 'next/dist/next-server/server/config';
 import Tasks from '../components/traversy/Tasks';
 import FormButton from '../components/traversy/FormButton';
 import Navbar from '../components/chakraPro/NavbarWithRightCta/Navbar';
 import { MyFlex } from '../components/traversy/Styled';
+import AddTask from '../components/traversy/AddTask';
 
 const SideFlex = ({ children }) => (
   <>
@@ -78,8 +81,12 @@ function App() {
   const deleteTask = (taskId) => {
     setTasksList(tasksList.filter((task) => task.id !== taskId));
   };
-  // adding new form items
-
+  // adding new form items with a fake ID
+  const addTask = (task) => {
+    const id = Math.floor(Math.random() * 10000) + 1;
+    const newTask = { id, ...task };
+    setTasksList([...tasksList, newTask]);
+  };
   // toggle reminder
   const toggleReminder = (taskId) => {
     setTasksList(
@@ -98,6 +105,7 @@ function App() {
           <OtherSideHeading>Welcome to...</OtherSideHeading>
           <SideHeading>The Task Tracker App</SideHeading>
           <FormButton />
+          <AddTask addTask={addTask} />
           {tasksList.length > 0 ? (
             <Tasks
               tasks={tasksList}

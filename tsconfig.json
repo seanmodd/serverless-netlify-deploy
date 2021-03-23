@@ -22,7 +22,7 @@
     "noUnusedLocals": true,
   },
   "include": [
-   pages/index.jsylepages/tasktracker.js, "pages/tasktracker.js"
+   pages/index.jslepages/tasktracker.js, "pages/tasktracker.js"
   ],
   "exclude": [
     "node_modules",
