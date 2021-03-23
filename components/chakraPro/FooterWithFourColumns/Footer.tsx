@@ -7,6 +7,7 @@ import {
   Stack,
   Text,
   Wrap,
+  useColorModeValue as mode,
   WrapItem,
 } from '@chakra-ui/react';
 import * as React from 'react';
@@ -17,7 +18,15 @@ import { footerLinks, links, socialLinks } from './_data';
 
 function Footer() {
   return (
-    <Box as="footer" bg="blue.600" color="white" py="64px">
+    <Box
+      borderTopWidth="10px"
+      borderColor={mode('gray.300', 'gray.900')}
+      as="footer"
+      bg={mode('gray.100', 'gray.800')}
+      color="white"
+      py="64px"
+      color={mode('gray.600', 'gray.300')}
+    >
       <Box maxW="7xl" px="8" mx="auto">
         <Flex
           direction={{ base: 'column', lg: 'row' }}

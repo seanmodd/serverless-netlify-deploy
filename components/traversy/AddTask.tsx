@@ -21,10 +21,7 @@ const AddTask = () => (
         </VStack>
         <Flex>
           <FormLabel>Set Reminder</FormLabel>
-          <Checkbox
-            type="checkbox"
-            // value={reminder}
-          />
+          <Checkbox type="checkbox" />
         </Flex>
         <Button type="submit" bg="black" textColor="white">
           Save Task

@@ -57,7 +57,7 @@ function App() {
       id: 1,
       text: 'Doctors',
       day: 'Feb 5th at 2:30pm',
-      reminder: true,
+      reminder: false,
     },
     {
       id: 2,
@@ -75,11 +75,19 @@ function App() {
   // state toggles for showing and hiding the form
   const [showForm, setShowForm] = useState(false);
   // delete tasks
-
+  const deleteTask = (taskId) => {
+    setTasksList(tasksList.filter((task) => task.id !== taskId));
+  };
   // adding new form items
 
   // toggle reminder
-
+  const toggleReminder = (taskId) => {
+    setTasksList(
+      tasksList.map((task) =>
+        task.id === taskId ? { ...task, reminder: !task.reminder } : task
+      )
+    );
+  };
   // The Actual Components:
 
   return (
@@ -91,7 +99,11 @@ function App() {
           <SideHeading>The Task Tracker App</SideHeading>
           <FormButton />
           {tasksList.length > 0 ? (
-            <Tasks tasks={tasksList} />
+            <Tasks
+              tasks={tasksList}
+              onDelete={deleteTask}
+              onToggle={toggleReminder}
+            />
           ) : (
             <Heading fontSize={80} textColor="red.500">
               No tasks to show!

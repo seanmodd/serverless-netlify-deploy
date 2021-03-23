@@ -21,7 +21,8 @@ const Navbar = () => (
       <Box
         as="header"
         bg={mode('gray.100', 'gray.800')}
-        borderBottomWidth="1px"
+        borderBottomWidth="10px"
+        borderColor={mode('gray.300', 'gray.900')}
       >
         <Box maxW="7xl" mx="auto" py="4" px={{ base: '6', md: '8' }}>
           <Flex as="nav" justify="space-between">

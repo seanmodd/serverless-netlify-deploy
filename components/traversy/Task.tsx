@@ -26,13 +26,29 @@ const NewStack = ({ children }) => (
     </VStack>
   </>
 );
+
+const pressedStyle = {
+  color: '#ff00ae',
+  width: 'auto',
+  transition: 'all 0.2s ease-out',
+
+  boxShadow: '6px 12px #ff00ae',
+  fontWeight: '400',
+};
+
 const SideButton = ({ children }) => (
   <>
     <Spacer />
+
+    {children}
+    <Spacer />
+  </>
+);
+const SideImportant = ({ children }) => (
+  <>
     <VStack>
-      <CloseIcon cursor="pointer" color="red.500" mt={3} ml={4} />
       <Spacer />
-      <Button colorScheme="whatsapp">?!</Button>
+      {children}
     </VStack>
   </>
 );
@@ -67,23 +83,39 @@ const SideDate = ({ children }) => (
 
 const SideReminder = ({ children }) => (
   <>
-    {{ children } && (
-      <Heading mb={15} textColor="red.500" fontSize={20} fontWeight="normal">
-        Reminder!
-      </Heading>
-    )}
+    <Heading mb={15} textColor="red.500" fontSize={20} fontWeight="normal">
+      {children}
+    </Heading>
   </>
 );
 
-const Task = ({ task }) => (
+const Task = ({ task, onDelete, onToggle }) => (
   <>
     <NewFlex>
       <NewStack>
         <SideText>{task.text}</SideText>
         <SideDate>{task.day}</SideDate>
-        <SideReminder>{task.reminder}</SideReminder>
+        <SideReminder>{`${
+          task.reminder ? 'important!!!' : 'not important'
+        }`}</SideReminder>
       </NewStack>
-      <SideButton />
+      <SideButton>
+        <CloseIcon
+          _hover={pressedStyle}
+          cursor="pointer"
+          color="red.500"
+          onClick={() => onDelete(task.id)}
+        />
+      </SideButton>
+      <SideImportant>
+        <Button
+          colorScheme="whatsapp"
+          _hover={pressedStyle}
+          onDoubleClick={() => onToggle(task.id)}
+        >
+          ?!
+        </Button>
+      </SideImportant>
     </NewFlex>
   </>
 );

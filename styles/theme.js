@@ -31,7 +31,7 @@ const fonts = {
   body: 'Poppins',
   heading: 'Poppins',
 };
-
+// Poppins, Inter, Archivo, Epilogue, Bai Jamjuree, Sora
 const breakpoints = createBreakpoints({
   // sm: '40em',
   // md: '52em',
