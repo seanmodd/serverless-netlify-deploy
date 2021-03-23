@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useColorModeValue as mode } from '@chakra-ui/color-mode';
-import { Flex, Heading, VStack } from '@chakra-ui/layout';
+import { Flex, Heading, Spacer, VStack } from '@chakra-ui/layout';
 import { css, jsx } from '@emotion/react';
 import { AddIcon } from '@chakra-ui/icons';
 import { isTargetLikeServerless } from 'next/dist/next-server/server/config';
@@ -167,6 +167,17 @@ function App() {
               No tasks to show!
             </Heading>
           )}
+          <Spacer />
+          <Spacer />
+          <Spacer />
+          <Spacer />
+          <Spacer />
+          <Spacer />
+          <Spacer />
+          <Spacer />
+          <Spacer />
+          <Spacer />
+          <footer>Copyright &copy; 2021</footer>
         </VStack>
       </SideFlex>
     </>

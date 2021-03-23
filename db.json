@@ -17,22 +17,6 @@
       "day": "Tomorrow",
       "reminder": false,
       "id": 5
-    },
-    {
-      "reminder": true,
-      "id": 6
-    },
-    {
-      "text": "sadf",
-      "day": "sadf",
-      "reminder": false,
-      "id": 7
-    },
-    {
-      "text": "sadf",
-      "day": "sadf",
-      "reminder": true,
-      "id": 8
     }
   ]
 }

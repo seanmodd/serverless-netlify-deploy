@@ -45,10 +45,14 @@ const Navbar = () => (
                 </NavLink.Desktop>
                 <NavLink.Desktop>
                   <NextLink href="/myIndex" passHref>
-                    My Index aka Tester Page
+                    Sample Landing Page
                   </NextLink>
                 </NavLink.Desktop>
-                <NavLink.Desktop>Help</NavLink.Desktop>
+                <NavLink.Desktop>
+                  <NextLink href="/weather" passHref>
+                    Weather
+                  </NextLink>
+                </NavLink.Desktop>
               </HStack>
             </HStack>
             <Flex align="center">
