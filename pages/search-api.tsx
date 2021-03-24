@@ -5,6 +5,7 @@ import Navbar from '../components/chakraPro/NavbarWithRightCta/Navbar';
 import ImageList from '../components/udemy/ImageList';
 import SearchBar from '../components/udemy/SearchBar';
 
+
 class App extends React.Component {
   state = { images: [] };
 
