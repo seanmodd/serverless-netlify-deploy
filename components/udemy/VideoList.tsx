@@ -3,17 +3,18 @@ import { FormControl } from '@chakra-ui/form-control';
 import { Input } from '@chakra-ui/input';
 import { Flex, Heading, Stack, VStack } from '@chakra-ui/layout';
 import React from 'react';
+import VideoItem from './VideoItem';
 
-const VideoList = (props) => {
-  const images = props.images.map((image) => (
-    <img key={image.id} src={image.urls.regular} />
+const VideoList = ({ videos }) => {
+  const renderedList = videos.map((video) => (
+    <VideoItem key={video.id} video={video} />
   ));
   return (
     <>
       <Flex d="flex" flexDirection="column" alignItems="center" my={5}>
         <Stack>
           <VStack w="200px" my={5}>
-            {images}
+            {renderedList}
           </VStack>
         </Stack>
       </Flex>

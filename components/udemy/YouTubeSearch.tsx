@@ -20,9 +20,39 @@ const buttonStyle = {
   textShadow: '6px 6px #ff00ae',
   fontWeight: '400',
 };
-
+const MyButton = ({ children }) => (
+  <>
+    <Button
+      transition="0.1s"
+      boxShadow="3px 3px 3px 3px rgba(0, 0, 255, 0.2)"
+      background="blue"
+      color="white"
+      my={10}
+      _hover={hoverStyle}
+      _active={buttonStyle}
+      type="submit"
+    >
+      {children}
+    </Button>
+  </>
+);
+const SeanInput = ({ children }) => (
+  <>
+    <Input
+      color="pink.500"
+      variant="outline"
+      placeholder="SEANINPUT for videos..."
+    >
+      {children}
+    </Input>
+  </>
+);
 class YouTubeSearch extends React.Component {
   state = { term: '' };
+
+  onInputChange = (event) => {
+    this.setState({ term: event.target.value });
+  };
 
   onFormSubmit = (event) => {
     event.preventDefault();
@@ -36,24 +66,12 @@ class YouTubeSearch extends React.Component {
           <Input
             color="pink.500"
             variant="outline"
-            placeholder="Search for images..."
+            placeholder="Search for VIDEOS..."
             value={this.state.term}
-            onChange={(e) =>
-              this.setState({ term: e.target.value.toLowerCase() })
-            }
+            onChange={this.onInputChange}
           />
-          <Button
-            transition="0.1s"
-            boxShadow="3px 3px 3px 3px rgba(0, 0, 255, 0.2)"
-            background="blue"
-            color="white"
-            my={10}
-            _hover={hoverStyle}
-            _active={buttonStyle}
-            type="submit"
-          >
-            Submit
-          </Button>
+          <SeanInput value={this.state.term} onChange={this.onInputChange} />
+          <MyButton>Submit</MyButton>
         </form>
       </>
     );

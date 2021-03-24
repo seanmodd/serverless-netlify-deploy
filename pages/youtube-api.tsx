@@ -1,11 +1,11 @@
 import { Flex, Heading, Spacer } from '@chakra-ui/layout';
 import React from 'react';
 import { useColorModeValue as mode } from '@chakra-ui/color-mode';
-import unsplash from '../components/api/unsplash';
+
 import Navbar from '../components/chakraPro/NavbarWithRightCta/Navbar';
 import VideoList from '../components/udemy/VideoList';
 import YouTubeSearch from '../components/udemy/YouTubeSearch';
-
+import youtube from '../components/api/youtube';
 
 const pressedStyle = {
   width: 'auto',
@@ -62,13 +62,13 @@ const SeanFlex = ({ children }) => (
   </>
 );
 class App extends React.Component {
-  state = { images: [] };
+  state = { videos: [] };
 
   onSearchSubmit = async (term) => {
-    const response = await unsplash.get('/search/photos', {
-      params: { query: term },
+    const response = await youtube.get('/search', {
+      params: { q: term },
     });
-    this.setState({ images: response.data.results });
+    this.setState({ videos: response.data.items });
   };
 
   render() {
@@ -81,8 +81,8 @@ class App extends React.Component {
 
           <YouTubeSearch onSubmit={this.onSearchSubmit} />
           <MyFlex>
-            <div align="center">Found: {this.state.images.length} images</div>
-            <VideoList images={this.state.images} />
+            <div align="center">Found: {this.state.videos.length} videos</div>
+            <VideoList videos={this.state.videos} />
           </MyFlex>
         </SeanFlex>
       </>
