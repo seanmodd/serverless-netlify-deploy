@@ -11,6 +11,11 @@ class SearchBar extends React.Component {
     console.log(e);
   }
 
+  onFormSubmit = (event) => {
+    event.preventDefault();
+    console.log(this.state.term);
+  };
+
   render() {
     return (
       <>
@@ -20,7 +25,7 @@ class SearchBar extends React.Component {
           </Heading>
 
           <Stack w="30%" justifyContent="align" alignItems="center" spacing={3}>
-            <form align="center">
+            <form onSubmit={this.onFormSubmit} align="center">
               <Input
                 my={3}
                 variant="outline"
