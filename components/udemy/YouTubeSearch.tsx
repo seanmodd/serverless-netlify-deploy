@@ -67,41 +67,29 @@ class YouTubeSearch extends React.Component {
   render() {
     return (
       <>
-        <Flex d="flex" flexDirection="column" alignItems="center" mt={59}>
-          <OtherSideHeading>Welcome to...</OtherSideHeading>
-          <SideHeading>YouTube API App</SideHeading>
-
-          <Stack
-            w="300px"
-            justifyContent="align"
-            alignItems="center"
-            spacing={3}
+        <form onSubmit={this.onFormSubmit} align="center">
+          <Input
+            color="pink.500"
+            variant="outline"
+            placeholder="Search for images..."
+            value={this.state.term}
+            onChange={(e) =>
+              this.setState({ term: e.target.value.toLowerCase() })
+            }
+          />
+          <Button
+            transition="0.1s"
+            boxShadow="3px 3px 3px 3px rgba(0, 0, 255, 0.2)"
+            background="blue"
+            color="white"
+            my={10}
+            _hover={hoverStyle}
+            _active={buttonStyle}
+            type="submit"
           >
-            <form onSubmit={this.onFormSubmit} align="center">
-              <Input
-                color="pink.500"
-                variant="outline"
-                placeholder="Search for images..."
-                value={this.state.term}
-                onChange={(e) =>
-                  this.setState({ term: e.target.value.toLowerCase() })
-                }
-              />
-              <Button
-                transition="0.1s"
-                boxShadow="3px 3px 3px 3px rgba(0, 0, 255, 0.2)"
-                background="blue"
-                color="white"
-                my={10}
-                _hover={hoverStyle}
-                _active={buttonStyle}
-                type="submit"
-              >
-                Submit
-              </Button>
-            </form>
-          </Stack>
-        </Flex>
+            Submit
+          </Button>
+        </form>
       </>
     );
   }
