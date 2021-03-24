@@ -1,11 +1,13 @@
-import { Flex, Heading, Spacer } from '@chakra-ui/layout';
+import { Box, Flex, Heading, HStack, Spacer, Stack } from '@chakra-ui/layout';
 import React from 'react';
 import { useColorModeValue as mode } from '@chakra-ui/color-mode';
-
+import { Alert } from 'reactstrap';
+import { Text } from '@chakra-ui/react';
 import Navbar from '../components/chakraPro/NavbarWithRightCta/Navbar';
 import VideoList from '../components/udemy/VideoList';
 import YouTubeSearch from '../components/udemy/YouTubeSearch';
 import youtube from '../components/api/youtube';
+import VideoDetail from '../components/udemy/VideoDetail';
 
 const pressedStyle = {
   width: 'auto',
@@ -44,10 +46,11 @@ const SideHeading = ({ children }) => (
 const MyFlex = ({ children }) => (
   <>
     <Flex
-      alignItems="center"
       textAlign="center"
       justifyContent="center"
       mb={40}
+      flexWrap="wrap"
+      alignItems="top"
       flexDirection="column"
     >
       {children}
@@ -62,7 +65,7 @@ const SeanFlex = ({ children }) => (
   </>
 );
 class App extends React.Component {
-  state = { videos: [] };
+  state = { videos: [], selectedVideo: null };
 
   onSearchSubmit = async (term) => {
     const response = await youtube.get('/search', {
@@ -71,19 +74,37 @@ class App extends React.Component {
     this.setState({ videos: response.data.items });
   };
 
+  onVideoSelect = (video) => {
+    console.log('from the app!', video);
+    this.setState({ selectedVideo: video });
+  };
+
   render() {
     return (
       <>
         <Navbar />
+
         <SeanFlex>
           <OtherSideHeading>Welcome to...</OtherSideHeading>
           <SideHeading>YouTube API App</SideHeading>
 
           <YouTubeSearch onSubmit={this.onSearchSubmit} />
-          <MyFlex>
-            <div align="center">Found: {this.state.videos.length} videos</div>
-            <VideoList videos={this.state.videos} />
-          </MyFlex>
+          <Stack alignItems="center">
+            <VideoDetail video={this.state.selectedVideo} />
+            <Text align="center">Found: {this.state.videos.length} videos</Text>
+
+            <HStack alignItems="center" justifyContent="center" flexWrap="wrap">
+              <Box flex="1" />
+              <Flex alignItems="center" justifyContent="center">
+                <MyFlex>
+                  <VideoList
+                    onVideoSelect={this.onVideoSelect}
+                    videos={this.state.videos}
+                  />
+                </MyFlex>
+              </Flex>
+            </HStack>
+          </Stack>
         </SeanFlex>
       </>
     );
