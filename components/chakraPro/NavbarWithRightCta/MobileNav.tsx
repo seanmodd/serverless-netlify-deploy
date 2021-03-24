@@ -140,17 +140,19 @@ export const MobileNav = () => {
                   </NextLink>
                 </NavLink.Mobile>
                 <NavLink.Mobile icon={HiExclamationCircle}>
-                  <NextLink href="/youtube/tasktracker#" passHref>
-                    To-Do List
+                  <NextLink href="/nobackend" passHref>
+                    To-Do List with No Backend
                   </NextLink>
                 </NavLink.Mobile>
                 <NavLink.Mobile icon={HiEmojiHappy}>
                   <NextLink href="/myIndex" passHref>
-                    myIndex Tester Page
+                    Landing Page
                   </NextLink>
                 </NavLink.Mobile>
                 <NavLink.Mobile icon={HiQuestionMarkCircle}>
-                  Help
+                  <NextLink href="/search-api" passHref>
+                    Search API App
+                  </NextLink>
                 </NavLink.Mobile>
               </SimpleGrid>
               <VStack mt="8" spacing="4">
