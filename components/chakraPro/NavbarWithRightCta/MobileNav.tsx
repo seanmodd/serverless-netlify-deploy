@@ -21,6 +21,7 @@ import {
   HiOutlineMenu,
   HiOutlineX,
   HiQuestionMarkCircle,
+  HiVideoCamera,
 } from 'react-icons/hi';
 import { RemoveScroll } from 'react-remove-scroll';
 import { Logo } from './Logo';
@@ -152,6 +153,11 @@ export const MobileNav = () => {
                 <NavLink.Mobile icon={HiQuestionMarkCircle}>
                   <NextLink href="/search-api" passHref>
                     Search API App
+                  </NextLink>
+                </NavLink.Mobile>
+                <NavLink.Mobile icon={HiVideoCamera}>
+                  <NextLink href="/youtube-api" passHref>
+                    YouTube API
                   </NextLink>
                 </NavLink.Mobile>
               </SimpleGrid>

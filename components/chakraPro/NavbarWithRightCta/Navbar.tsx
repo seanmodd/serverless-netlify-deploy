@@ -45,12 +45,17 @@ const Navbar = () => (
                 </NavLink.Desktop>
                 <NavLink.Desktop>
                   <NextLink href="/myIndex" passHref>
-                    Sample Landing Page
+                    Landing Page
                   </NextLink>
                 </NavLink.Desktop>
                 <NavLink.Desktop>
                   <NextLink href="/search-api" passHref>
                     Search API
+                  </NextLink>
+                </NavLink.Desktop>
+                <NavLink.Desktop>
+                  <NextLink href="/youtube-api" passHref>
+                    YouTube API
                   </NextLink>
                 </NavLink.Desktop>
               </HStack>
