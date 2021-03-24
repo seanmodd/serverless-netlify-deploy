@@ -21,41 +21,6 @@ const buttonStyle = {
   fontWeight: '400',
 };
 
-const pressedStyle = {
-  width: 'auto',
-  transition: 'all 0.5s ease-out',
-  textShadow: '3px 3px #f2ff00',
-};
-
-const OtherSideHeading = ({ children }) => (
-  <>
-    <Heading
-      color={mode('gray.900', 'gray.50')}
-      fontSize={{ base: '25px', md: '30px', lg: '35px' }}
-      fontWeight="200"
-      mt="50px"
-    >
-      {children}
-    </Heading>
-  </>
-);
-
-const SideHeading = ({ children }) => (
-  <>
-    <Heading
-      alignItems="center"
-      textAlign="center"
-      justifyContent="center"
-      mb={10}
-      mt={10}
-      textShadow="3px 3px #ff00ae"
-      fontSize={['40px', '50px', '60px', '70px']}
-      _hover={pressedStyle}
-    >
-      {children}
-    </Heading>
-  </>
-);
 class YouTubeSearch extends React.Component {
   state = { term: '' };
 

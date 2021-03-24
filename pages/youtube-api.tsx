@@ -6,21 +6,6 @@ import Navbar from '../components/chakraPro/NavbarWithRightCta/Navbar';
 import VideoList from '../components/udemy/VideoList';
 import YouTubeSearch from '../components/udemy/YouTubeSearch';
 
-const hoverStyle = {
-  boxShadow: '7px 7px 7px 7px  rgba(223, 3, 172, 0.2)',
-  textShadow: '1px 1px #ff0000',
-  transition: 'all .2s ease-out',
-  background: '#62ff00',
-  color: 'black',
-  fontWeight: '400',
-};
-const buttonStyle = {
-  background: '#0d00ff',
-  color: '#ffff00',
-  transition: 'all 0.6s ease-out',
-  textShadow: '6px 6px #ff00ae',
-  fontWeight: '400',
-};
 
 const pressedStyle = {
   width: 'auto',
