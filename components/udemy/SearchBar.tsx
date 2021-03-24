@@ -20,12 +20,17 @@ class SearchBar extends React.Component {
             The Image API App!
           </Heading>
 
-          <Stack w="30%" justifyContent="align" alignItems="center" spacing={3}>
+          <Stack
+            w="300px"
+            justifyContent="align"
+            alignItems="center"
+            spacing={3}
+          >
             <form onSubmit={this.onFormSubmit} align="center">
               <Input
                 color="pink.500"
                 variant="outline"
-                placeholder="Search AGAIN for images..."
+                placeholder="Search for images..."
                 value={this.state.term}
                 onChange={(e) =>
                   this.setState({ term: e.target.value.toLowerCase() })
@@ -34,7 +39,7 @@ class SearchBar extends React.Component {
               <Button
                 justifyContent="center"
                 alignItems="center"
-                w="25%"
+                w="200px"
                 colorScheme="whatsapp"
                 type="submit"
                 mt={5}
