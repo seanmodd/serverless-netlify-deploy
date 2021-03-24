@@ -12,7 +12,7 @@ const ImageList = (props) => {
     <>
       <Flex d="flex" flexDirection="column" alignItems="center" my={5}>
         <Stack>
-          <VStack w="400px" my={5}>
+          <VStack w="200px" my={5}>
             {images}
           </VStack>
         </Stack>
