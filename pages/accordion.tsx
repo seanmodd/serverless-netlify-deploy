@@ -9,6 +9,7 @@ import YouTubeSearch from '../components/udemy/YouTubeSearch';
 import youtube from '../components/api/youtube';
 import VideoDetail from '../components/udemy/VideoDetail';
 import Accordion from '../components/udemy/Accordion';
+import MyNavbar from '../components/udemy/youtube/MyNavbar';
 
 const pressedStyle = {
   width: 'auto',
@@ -71,6 +72,7 @@ class App extends React.Component {
   render() {
     return (
       <>
+        <MyNavbar />
         <Navbar />
 
         <SeanFlex>

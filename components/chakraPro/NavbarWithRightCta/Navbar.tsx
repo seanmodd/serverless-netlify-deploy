@@ -17,7 +17,7 @@ import { NavLink } from './NavLink';
 
 const Navbar = () => (
   <>
-    <Box w="100%" sx={{ position: 'fixed', zIndex: 10 }}>
+    <Box w="100%" sx={{ position: 'fixed', zIndex: 1 }}>
       <Box
         as="header"
         bg={mode('gray.100', 'gray.800')}

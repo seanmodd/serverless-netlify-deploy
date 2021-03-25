@@ -9,6 +9,7 @@ import FormButton from '../components/traversy/FormButton';
 import Navbar from '../components/chakraPro/NavbarWithRightCta/Navbar';
 import { MyFlex } from '../components/traversy/Styled';
 import AddTask from '../components/traversy/AddTask';
+import MyNavbar from '../components/udemy/youtube/MyNavbar';
 
 const SideFlex = ({ children }) => (
   <>
@@ -146,6 +147,7 @@ function App() {
 
   return (
     <>
+      <MyNavbar /> 
       <Navbar />
       <SideFlex>
         <VStack>
