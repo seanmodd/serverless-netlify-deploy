@@ -84,7 +84,6 @@ class App extends React.Component {
     return (
       <>
         <Navbar />
-        <MyNavbar />
         <SeanFlex>
           <OtherSideHeading>Welcome to...</OtherSideHeading>
           <SideHeading>YouTube API App</SideHeading>

@@ -72,7 +72,6 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <MyNavbar />
         <Navbar />
 
         <SeanFlex>

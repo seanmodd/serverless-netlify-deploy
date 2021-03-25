@@ -18,6 +18,7 @@ import { Fonts } from '../styles/Fonts';
 import '../styles/globals.css';
 import MyNavbar from '../components/udemy/youtube/MyNavbar';
 import GlobalStyles from '../styles/globals';
+import DcodeNavbar from '../components/udemy/youtube/dCodeNavbar';
 // const GlobalStyleColorMode = ({ children }) => {
 //   const { colorMode } = useColorMode();
 
@@ -29,7 +30,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Fonts />
       <ChakraProvider resetCSS theme={customTheme}>
-        <MyNavbar />
+        <DcodeNavbar />
         {/* <GlobalStyles /> */}
         {/* GlobalStyles is now included in customTheme, no need to have GlobalStyles standalone! */}
         {/* <ColorModeProvider

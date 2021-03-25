@@ -147,7 +147,6 @@ function App() {
 
   return (
     <>
-      <MyNavbar /> 
       <Navbar />
       <SideFlex>
         <VStack>

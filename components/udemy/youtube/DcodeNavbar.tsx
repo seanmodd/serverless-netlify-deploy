@@ -5,29 +5,24 @@ import { Flex, Heading, Stack, VStack } from '@chakra-ui/layout';
 import React from 'react';
 import styles from './dCodeNavbar.module.css';
 
+const BarItems = ({ name, myhref }) => (
+  <a href={myhref} className={styles.nav__link}>
+    <i className={styles.nav__icon} />
+    <span className="nav__text">{name}</span>
+  </a>
+);
+
 const DcodeNavbar = () => (
   <>
     <nav className={styles.nav}>
-      <a href="#" className={styles.nav__link}>
-        <i className={styles.nav__icon}>dashboard</i>
-        <span className="nav__text">Dashboard</span>
-      </a>
-      <a href="#" className={styles.nav__link}>
-        <i className={styles.nav__icon}>person</i>
-        <span className={styles.nav__text}>Profile</span>
-      </a>
-      <a href="#" className={styles.nav__link}>
-        <i className={styles.nav__icon}>devices</i>
-        <span className={styles.nav__text}>Devices</span>
-      </a>
-      <a href="#" className={styles.nav__link}>
-        <i className={styles.nav__icon}>lock</i>
-        <span className={styles.nav__text}>Privacy</span>
-      </a>
-      <a href="#" className={styles.nav__link}>
-        <i className={styles.nav__icon}>settings</i>
-        <span className={styles.nav__text}>Settings</span>
-      </a>
+      <BarItems name="Dashboard" myhref="/#" />
+      <BarItems name="To-Do List" myhref="/nobackend" />
+      <BarItems name="Landing Page" myhref="/myIndex" />
+    </nav>
+    <nav className={styles.navtop}>
+      <BarItems name="Search API" myhref="/search-api" />
+      <BarItems name="YouTube API" myhref="/youtube-api" />
+      <BarItems name="Accordion" myhref="/accordion" />
     </nav>
   </>
 );
