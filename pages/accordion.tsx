@@ -10,6 +10,7 @@ import youtube from '../components/api/youtube';
 import VideoDetail from '../components/udemy/VideoDetail';
 import Accordion from '../components/udemy/Accordion';
 import MyNavbar from '../components/udemy/youtube/MyNavbar';
+import MySearch from '../components/udemy/youtube/Search';
 
 const pressedStyle = {
   width: 'auto',
@@ -77,6 +78,7 @@ class App extends React.Component {
         <SeanFlex>
           <OtherSideHeading>Welcome to...</OtherSideHeading>
           <SideHeading>The Accordion App</SideHeading>
+          <MySearch />
           <Accordion items={items} />
         </SeanFlex>
       </>

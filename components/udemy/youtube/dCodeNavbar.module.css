@@ -8,7 +8,8 @@
 
   row-gap: 5%;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
+  background-color: black;
+  text-color: white;
   display: flex;
   overflow: scroll;
 }
@@ -23,7 +24,8 @@
 
   row-gap: 5%;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
+  background-color: black;
+  text-color: white;
   display: flex;
   overflow: scroll;
 }
@@ -40,14 +42,17 @@
   white-space: nowrap;
   font-size: 13px;
   bottom-border: black;
-  color: #444444;
+  background-color: black;
+  text-color: white;
+  color: white;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
   transition: background-color 0.1s ease-in-out;
 }
 
 .nav__link:hover {
-  background-color: #eeeeee;
+  background-color: white;
+  color: red;
   z-index: 20;
 }
 
@@ -69,6 +74,7 @@
     flex-wrap: wrap;
     height: 8rem;
     flex-direction: row;
+
     overflow: clip;
   }
 
