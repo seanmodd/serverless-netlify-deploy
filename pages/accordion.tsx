@@ -24,7 +24,7 @@ const OtherSideHeading = ({ children }) => (
       color={mode('gray.900', 'gray.50')}
       fontSize={{ base: '25px', md: '30px', lg: '35px' }}
       fontWeight="200"
-      mt={125}
+      mt={75}
     >
       {children}
     </Heading>
@@ -38,7 +38,7 @@ const SideHeading = ({ children }) => (
       textAlign="center"
       justifyContent="center"
       textShadow="3px 3px #ff00ae"
-      my={10}
+      my={4}
       fontSize={['40px', '50px', '60px', '70px']}
       _hover={pressedStyle}
     >

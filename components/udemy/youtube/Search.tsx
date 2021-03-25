@@ -1,6 +1,8 @@
+import { Button } from '@chakra-ui/button';
 import { FormLabel } from '@chakra-ui/form-control';
+import { ArrowForwardIcon } from '@chakra-ui/icons';
 import { Input } from '@chakra-ui/input';
-import { Flex, Heading } from '@chakra-ui/layout';
+import { Box, Flex, Heading, Text, VStack } from '@chakra-ui/layout';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { CardHeader, Label } from 'reactstrap';
@@ -26,19 +28,41 @@ const MySearch = () => {
 
     search();
   }, [term]);
-
+  const renderedResults = results.map((result) => (
+    <Box w={['90%', '90%', '90%', '40%']}>
+      <Box>
+        <VStack spacing="10px">
+          <Heading fontSize="lg" textAlign="center">
+            {result.title}
+          </Heading>{' '}
+          <Text fontSize="sm" textAlign="center">
+            {result.snippet}
+          </Text>
+        </VStack>
+      </Box>
+    </Box>
+  ));
   return (
     <>
-      <Heading mb={5}>Search</Heading>
-      <Flex mb={10} pb={10} flexDirection="column">
+      <VStack spacing="15px">
+        <Heading>Search</Heading>
         <FormLabel textAlign="center">Enter Search Term</FormLabel>
         <Input
+          w={['60%', '50%', '50%', '20%']}
           variant="outline"
           value={term}
           onChange={(e) => setTerm(e.target.value)}
           className="input"
         />
-      </Flex>
+        <Button
+          rightIcon={<ArrowForwardIcon />}
+          colorScheme="whatsapp"
+          variant="outline"
+        >
+          Search
+        </Button>
+        {renderedResults}
+      </VStack>
     </>
   );
 };
