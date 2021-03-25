@@ -38,7 +38,8 @@ const SideHeading = ({ children }) => (
       textAlign="center"
       justifyContent="center"
       textShadow="3px 3px #ff00ae"
-      my={4}
+      mt={4}
+      mb={2}
       fontSize={['40px', '50px', '60px', '70px']}
       _hover={pressedStyle}
     >
