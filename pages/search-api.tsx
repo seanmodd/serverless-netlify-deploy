@@ -4,7 +4,7 @@ import unsplash from '../components/api/unsplash';
 import Navbar from '../components/chakraPro/NavbarWithRightCta/Navbar';
 import ImageList from '../components/udemy/ImageList';
 import SearchBar from '../components/udemy/SearchBar';
-
+import DcodeNavbar from '../components/udemy/youtube/DcodeNavbar';
 
 class App extends React.Component {
   state = { images: [] };
@@ -20,6 +20,7 @@ class App extends React.Component {
     return (
       <>
         <Navbar />
+        <DcodeNavbar />
         App
         <SearchBar onSubmit={this.onSearchSubmit} />
         <Flex
