@@ -15,7 +15,8 @@ import customTheme from '../styles/theme';
 import LightTheme from '../styles/light';
 import DarkTheme from '../styles/dark';
 import { Fonts } from '../styles/Fonts';
-import GlobalStyles from '../styles/globals'
+import '../styles/globals.css';
+import GlobalStyles from '../styles/globals';
 // const GlobalStyleColorMode = ({ children }) => {
 //   const { colorMode } = useColorMode();
 
@@ -26,24 +27,19 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Fonts />
-      <ChakraProvider 
-      resetCSS
-       theme={customTheme}
-       >
-         {/* <GlobalStyles /> */}
-         {/* GlobalStyles is now included in customTheme, no need to have GlobalStyles standalone! */}
+      <ChakraProvider resetCSS theme={customTheme}>
+        {/* <GlobalStyles /> */}
+        {/* GlobalStyles is now included in customTheme, no need to have GlobalStyles standalone! */}
         {/* <ColorModeProvider
           options={{
             initialColorMode: 'light',
             useSystemColorMode: true,
           }}
         /> */}
-          {/* <GlobalStyleColorMode /> */}
-            <Component 
-            // {...pageProps} 
-            />
-          
-
+        {/* <GlobalStyleColorMode /> */}
+        <Component
+        // {...pageProps}
+        />
 
         <Footer />
       </ChakraProvider>

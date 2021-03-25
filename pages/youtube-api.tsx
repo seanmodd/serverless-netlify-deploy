@@ -8,6 +8,7 @@ import VideoList from '../components/udemy/VideoList';
 import YouTubeSearch from '../components/udemy/YouTubeSearch';
 import youtube from '../components/api/youtube';
 import VideoDetail from '../components/udemy/VideoDetail';
+import MyNavbar from '../components/udemy/youtube/MyNavbar';
 
 const pressedStyle = {
   width: 'auto',
@@ -83,7 +84,7 @@ class App extends React.Component {
     return (
       <>
         <Navbar />
-
+        <MyNavbar />
         <SeanFlex>
           <OtherSideHeading>Welcome to...</OtherSideHeading>
           <SideHeading>YouTube API App</SideHeading>
