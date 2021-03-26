@@ -29,5 +29,13 @@ const SeanFlex = styled(Flex)`
 const MyFlex = styled(Flex)`
   align-items: 'center';
 `;
+const MyFooter = styled(Flex)`
+  align-items: 'center';
 
-export { SeanFlex, MyFlex };
+  overflow: hidden;
+
+  bottom: 0;
+  top: 0;
+`;
+
+export { SeanFlex, MyFlex, MyFooter };
