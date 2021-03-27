@@ -17,6 +17,7 @@ import Navbar from '../components/chakraPro/NavbarWithRightCta/Navbar';
 import customTheme from '../styles/theme';
 import LightTheme from '../styles/light';
 import DarkTheme from '../styles/dark';
+import like from '../components/Like.svg';
 import { Fonts } from '../styles/Fonts';
 import '../styles/globals.css';
 import MyNavbar from '../components/udemy/youtube/MyNavbar';
